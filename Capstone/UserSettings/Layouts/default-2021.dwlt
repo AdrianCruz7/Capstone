@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 2048
     height: 1196.8
   m_ShowMode: 4
-  m_Title: Python Script Editor
+  m_Title: Project
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 371}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 2048
     height: 1146.8
-  m_MinSize: {x: 503, y: 321}
-  m_MaxSize: {x: 16192, y: 12117}
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 16
+  controlID: 43
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 483.19995
     height: 1146.8
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -92,10 +92,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 387.2
-    height: 577.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 344
+    height: 572.8
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -111,23 +111,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PythonConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 577.6
+    y: 572.8
     width: 1564.8
-    height: 569.2001
-  m_MinSize: {x: 550, y: 300}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+    height: 574.00006
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 2
+  m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
@@ -221,10 +221,10 @@ MonoBehaviour:
     y: 0
     width: 1564.8
     height: 1146.8
-  m_MinSize: {x: 403, y: 321}
-  m_MaxSize: {x: 8096, y: 12117}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 44
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,11 +245,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1564.8
-    height: 577.6
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+    height: 572.8
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18
+  controlID: 45
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,12 +265,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 387.2
+    x: 344
     y: 0
-    width: 1177.6001
-    height: 577.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 1220.8
+    height: 572.8
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -298,18 +298,50 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 651.2
+    y: 646.4
     width: 1563.8
-    height: 548.2001
+    height: 553.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_code: "import os\r\nimport openai\r\n\r\nopenai.api_key = \"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\"\n\ncreatedImage
-    = openai.Image.create(\r\n    prompt=\"a frog playing basketball\",\r\n    n=1,\r\n   
-    size=\"1024x1024\",\r\n)\r\n\r\nimageURL = createdImage['data'][0]['url']\r\n\r\nprint(imageURL)"
-  m_outputContents: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-EzGFqd9GPNuXw1Z2Nu5oRjim.png?st=2023-10-04T21%3A05%3A36Z&se=2023-10-04T23%3A05%3A36Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-04T18%3A37%3A57Z&ske=2023-10-05T18%3A37%3A57Z&sks=b&skv=2021-08-06&sig=D6SPDLgEcXpC2SGvuFl4v6Ie9ml8sVdhI8cN7lKRDd0%3D
+  m_code: "import os\r\nimport secrets\r\nimport openai\r\nimport boto3\r\nimport
+    urllib.request\r\nimport requests\r\nimport json\r\n#from PIL import Image\r\n\r\n#aws
+    stuff\r\nawsAccessKeyId = \"AKIAYAO4I4IRY2NXGMW5\"\r\nawsSecretAccessKey = \"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\"\r\nbucketName
+    = \"texttomodelbucket\"\r\n\r\n#bucket stuff\r\ns3 = boto3.client('s3', aws_access_key_id=awsAccessKeyId,
+    aws_secret_access_key=awsSecretAccessKey)\r\n\r\n\r\n#OpenAI stuff\r\nopenai.api_key
+    = \"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\"\r\n\r\n#create image\r\ncreatedImage
+    = openai.Image.create(\r\n    prompt=\"a low polygon tree\",\r\n    n=1,\r\n   
+    size=\"1024x1024\",\r\n)\r\n\r\n#grabs url from OpenAI\r\nimageURL = createdImage['data'][0]['url']\r\n\r\n#debug\r\nprint(imageURL
+    + \"\\n\")\r\n\r\n#generates a random name for the file\r\nimageName = \"Assets/ImagesFolder/\"
+    + secrets.token_urlsafe(16) + \".png\"\r\n\r\n#debug\r\nprint(imageName + \"\\n\")\r\n\r\n#downloads
+    it into a png\r\nurllib.request.urlretrieve(imageURL, imageName)\r\n\r\n#\"local\"
+    path\r\nlocalPath = imageName\r\n\r\n#folder path for bucket\r\ns3Key = \"testFolder/{}\".format(imageName)\r\n\r\ntry:\r\n   
+    s3.upload_file(localPath, bucketName, s3Key)\r\n    print(f\"Image uploaded to
+    S3: s3://{bucketName}/{s3Key}\\n\")\r\nexcept Exception as e:\r\n    print(f\"An
+    error occurred: {str(e)}\")\r\n\r\n#url to the image in aws\r\nawsURL = \"https://s3.amazonaws.com/{}/{}\".format(bucketName,
+    s3Key)\r\n\r\n#debug\r\nprint(awsURL + \"\\n\")\r\n\r\n\r\n#3dmodel stuff\r\nurl1
+    = \"https://api.csm.ai:5566/image-to-3d-sessions\"\r\n\r\npayload = json.dumps({\r\n 
+    \"image_url\": awsURL\r,\n  \"auto_gen_3d\":\"true\"\n})\r\n\r\nheaders = {\r\n 
+    'x-api-key': 'Ee26c558fb722788e0eecd22d3bE6c5E',\r\n  'Content-Type': 'application/json'\r\n}\r\n\r\nresponse
+    = requests.request(\"POST\", url1, headers=headers, data=payload)\r\nprint(response.text)\r\n\r\nprint(\"success?\")"
+  m_outputContents: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-V7sCuZNhd94euDYLm2NHTbkK.png?st=2023-10-09T20%3A40%3A51Z&se=2023-10-09T22%3A40%3A51Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-09T03%3A13%3A13Z&ske=2023-10-10T03%3A13%3A13Z&sks=b&skv=2021-08-06&sig=UTNKod73X/jeuuO/AMlYAia71mSR9poasIPYOwKYnsk%3D
+
+
+    Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png
+
+
+    Image
+    uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png
+
+
+    https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png
+
+
+    {"error":"","message":"Created","statusCode":201,"data":{"_id":"6524736a17388d9f6d15484b","user_id":"64ea7f237b9108933c1c6d04","session_code":"SESSION_1696887658_6495388","image_url":"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png","input_image":"","discord_user_id":"","user_name":"","email":"lincolncruz77@gmail.com","mesh_url_usdz":"","mesh_url_glb":"","mesh_url":"","polished_mesh_url_usdz":"","polished_mesh_url_glb":"","polished_mesh_url":"","mesh_url_obj":"","mesh_url_zip":"","preview_mesh_url_zip":"","preview_mesh_url_glb":"","preview_mesh_url_usdz":"","mp4_url":"","designer_mesh_url":"","session_gif":"","user_image":"","percentage":0,"price":0,"status":"training_preview","source":"external","demo":false,"private":true,"debug":false,"random_poses":true,"inference":[{"image_name":"U1.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U1.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=oG5v31FvBBskSGEEjxZjgY5FAjFO1BJEXWQbkxsN60k%3D","height":256,"width":256},{"image_name":"U2.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U2.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=w46NfvF2aHCJBeo4cA66krXXOZV%2BVceO5exggG/ujfU%3D","height":256,"width":256},{"image_name":"U3.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U3.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=3fCuTXKVfO8kMFe9f4y%2BFUZqGhoOmBaDNkvjAdcNnDI%3D","height":256,"width":256},{"image_name":"U4.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U4.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=AIpcDAiCo3gd7B1IBNRUT0u5N9MoQFRH6K31EeH0bG4%3D","height":256,"width":256}],"output_id":"78b8ada8-a1c8-49d7-8928-ad2535a93270","model_version":"","is_deleted":false,"created_at":"2023-10-09T21:40:58.765Z","updated_at":"2023-10-09T21:41:10.046Z"}}
+
+    success?
 
 '
 --- !u!114 &13
@@ -333,9 +365,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 752
+    y: 646.4
     width: 1563.8
-    height: 447.40002
+    height: 553.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -354,22 +386,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets/Treee
+    - Assets/PythonScripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets/Treee
+  - Assets/PythonScripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\.Neumont\Third Year\Capstone\Capstone\Capstone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b6570000
-    m_LastClickedID: 22454
-    m_ExpandedIDs: 000000008e5700009657000000ca9a3bffffff7f
+    m_SelectedIDs: ce570000
+    m_LastClickedID: 22478
+    m_ExpandedIDs: 00000000c057000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -385,7 +417,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -397,7 +429,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e570000
+    m_ExpandedIDs: 00000000c0570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -424,7 +456,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000305b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -441,7 +473,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 3}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -517,8 +549,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73.6
-    width: 386.2
-    height: 556.6
+    width: 343
+    height: 551.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -527,7 +559,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: fa570000
       m_LastClickedID: 0
       m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
@@ -573,10 +605,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 387.2
+    x: 344
     y: 73.6
-    width: 1175.6001
-    height: 556.6
+    width: 1218.8
+    height: 551.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -652,9 +684,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 67.5, y: 86}
+      snapOffset: {x: 67.5, y: -166}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 2
       id: Orientation
       index: 0
       layout: 4
@@ -812,9 +844,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.6889477, y: -1.3488079, z: 0.4740777}
+    m_Target: {x: -6.196262, y: -3.5868628, z: -1.0859411}
     speed: 2
-    m_Value: {x: -5.6889477, y: -1.3488079, z: 0.4740777}
+    m_Value: {x: -6.196262, y: -3.5868628, z: -1.0859411}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -861,9 +893,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.031996183, y: 0.8300003, z: -0.047868997, w: -0.5547865}
+    m_Target: {x: -0.08170268, y: 0.79869413, z: -0.11142135, w: -0.5856655}
     speed: 2
-    m_Value: {x: -0.031996123, y: 0.8299987, z: -0.047868904, w: -0.55478543}
+    m_Value: {x: -0.08170242, y: 0.7986916, z: -0.11142099, w: -0.5856636}
   m_Size:
     m_Target: 10
     speed: 2
@@ -1006,9 +1038,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 752
+    y: 646.4
     width: 1563.8
-    height: 447.40002
+    height: 553.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
