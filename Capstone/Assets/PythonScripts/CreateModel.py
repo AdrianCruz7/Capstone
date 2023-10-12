@@ -7,11 +7,30 @@ import requests
 import json
 #from PIL import Image
 
-#insert key code here
+#open file
+file = open('Assets/Editor/LastPrompt.json')
+
+#grab data from file
+data = json.load(file)
+
+#grabs prompt
+test1 = data.get('prompt')
+
+#debug
+print(test1)
+
+#closes file
+file.close()
+
+#debug
+print("Test")
+
+
+#insert code here
 
 #create image
 createdImage = openai.Image.create(
-    prompt="a low polygon tree",
+    prompt=test1,
     n=1,
     size="1024x1024",
 )

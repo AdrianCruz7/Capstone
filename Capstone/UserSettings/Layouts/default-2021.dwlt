@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 43
+  controlID: 83
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 44
+  controlID: 84
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 45
+  controlID: 85
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,40 +306,75 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_code: "import os\r\nimport secrets\r\nimport openai\r\nimport boto3\r\nimport
-    urllib.request\r\nimport requests\r\nimport json\r\n#from PIL import Image\r\n\r\n#aws
-    stuff\r\nawsAccessKeyId = \"AKIAYAO4I4IRY2NXGMW5\"\r\nawsSecretAccessKey = \"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\"\r\nbucketName
-    = \"texttomodelbucket\"\r\n\r\n#bucket stuff\r\ns3 = boto3.client('s3', aws_access_key_id=awsAccessKeyId,
-    aws_secret_access_key=awsSecretAccessKey)\r\n\r\n\r\n#OpenAI stuff\r\nopenai.api_key
-    = \"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\"\r\n\r\n#create image\r\ncreatedImage
-    = openai.Image.create(\r\n    prompt=\"a low polygon tree\",\r\n    n=1,\r\n   
-    size=\"1024x1024\",\r\n)\r\n\r\n#grabs url from OpenAI\r\nimageURL = createdImage['data'][0]['url']\r\n\r\n#debug\r\nprint(imageURL
-    + \"\\n\")\r\n\r\n#generates a random name for the file\r\nimageName = \"Assets/ImagesFolder/\"
-    + secrets.token_urlsafe(16) + \".png\"\r\n\r\n#debug\r\nprint(imageName + \"\\n\")\r\n\r\n#downloads
-    it into a png\r\nurllib.request.urlretrieve(imageURL, imageName)\r\n\r\n#\"local\"
-    path\r\nlocalPath = imageName\r\n\r\n#folder path for bucket\r\ns3Key = \"testFolder/{}\".format(imageName)\r\n\r\ntry:\r\n   
-    s3.upload_file(localPath, bucketName, s3Key)\r\n    print(f\"Image uploaded to
-    S3: s3://{bucketName}/{s3Key}\\n\")\r\nexcept Exception as e:\r\n    print(f\"An
-    error occurred: {str(e)}\")\r\n\r\n#url to the image in aws\r\nawsURL = \"https://s3.amazonaws.com/{}/{}\".format(bucketName,
-    s3Key)\r\n\r\n#debug\r\nprint(awsURL + \"\\n\")\r\n\r\n\r\n#3dmodel stuff\r\nurl1
-    = \"https://api.csm.ai:5566/image-to-3d-sessions\"\r\n\r\npayload = json.dumps({\r\n 
-    \"image_url\": awsURL\r,\n  \"auto_gen_3d\":\"true\"\n})\r\n\r\nheaders = {\r\n 
-    'x-api-key': 'Ee26c558fb722788e0eecd22d3bE6c5E',\r\n  'Content-Type': 'application/json'\r\n}\r\n\r\nresponse
-    = requests.request(\"POST\", url1, headers=headers, data=payload)\r\nprint(response.text)\r\n\r\nprint(\"success?\")"
-  m_outputContents: 'https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-V7sCuZNhd94euDYLm2NHTbkK.png?st=2023-10-09T20%3A40%3A51Z&se=2023-10-09T22%3A40%3A51Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-09T03%3A13%3A13Z&ske=2023-10-10T03%3A13%3A13Z&sks=b&skv=2021-08-06&sig=UTNKod73X/jeuuO/AMlYAia71mSR9poasIPYOwKYnsk%3D
+  m_code: 'import json
 
 
-    Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png
+    file = open(''Assets/Editor/LastPrompt.json'')
+
+
+    data
+    = json.load(file)
+
+
+    test1 = data.get(''prompt'')
+
+
+    print(test1)
+
+
+    file.close
+
+
+    print("Test")'
+  m_outputContents: 'a red rose
+
+    Test
+
+    A wheel of cheese
+
+    Test
+
+    A
+    sunflower
+
+    Test
+
+    https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-9utNoUdFw1F0INv8ETl6OCza.png?st=2023-10-12T06%3A32%3A03Z&se=2023-10-12T08%3A32%3A03Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-12T02%3A02%3A40Z&ske=2023-10-13T02%3A02%3A40Z&sks=b&skv=2021-08-06&sig=UkrPtfWrkueOD5YIAYsOkSI/OV5HjQ/aQGuWZEglSQQ%3D
+
+
+    Assets/ImagesFolder/fDHz1aJxmykBbf2ljbOnAg.png
 
 
     Image
-    uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png
+    uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/fDHz1aJxmykBbf2ljbOnAg.png
 
 
-    https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png
+    https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/fDHz1aJxmykBbf2ljbOnAg.png
 
 
-    {"error":"","message":"Created","statusCode":201,"data":{"_id":"6524736a17388d9f6d15484b","user_id":"64ea7f237b9108933c1c6d04","session_code":"SESSION_1696887658_6495388","image_url":"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/pR4WEQC4I2ImvgB6uN3lLw.png","input_image":"","discord_user_id":"","user_name":"","email":"lincolncruz77@gmail.com","mesh_url_usdz":"","mesh_url_glb":"","mesh_url":"","polished_mesh_url_usdz":"","polished_mesh_url_glb":"","polished_mesh_url":"","mesh_url_obj":"","mesh_url_zip":"","preview_mesh_url_zip":"","preview_mesh_url_glb":"","preview_mesh_url_usdz":"","mp4_url":"","designer_mesh_url":"","session_gif":"","user_image":"","percentage":0,"price":0,"status":"training_preview","source":"external","demo":false,"private":true,"debug":false,"random_poses":true,"inference":[{"image_name":"U1.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U1.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=oG5v31FvBBskSGEEjxZjgY5FAjFO1BJEXWQbkxsN60k%3D","height":256,"width":256},{"image_name":"U2.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U2.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=w46NfvF2aHCJBeo4cA66krXXOZV%2BVceO5exggG/ujfU%3D","height":256,"width":256},{"image_name":"U3.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U3.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=3fCuTXKVfO8kMFe9f4y%2BFUZqGhoOmBaDNkvjAdcNnDI%3D","height":256,"width":256},{"image_name":"U4.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696887658_6495388/U4.png?se=2032-11-24T05%3A41%3A07Z&sp=r&sv=2022-11-02&sr=b&sig=AIpcDAiCo3gd7B1IBNRUT0u5N9MoQFRH6K31EeH0bG4%3D","height":256,"width":256}],"output_id":"78b8ada8-a1c8-49d7-8928-ad2535a93270","model_version":"","is_deleted":false,"created_at":"2023-10-09T21:40:58.765Z","updated_at":"2023-10-09T21:41:10.046Z"}}
+    {"error":"","message":"Created","statusCode":201,"data":{"_id":"6527a0fe8b91232507b93079","user_id":"64ea7f237b9108933c1c6d04","session_code":"SESSION_1697095934_5899448","image_url":"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/fDHz1aJxmykBbf2ljbOnAg.png","input_image":"","discord_user_id":"","user_name":"","email":"lincolncruz77@gmail.com","mesh_url_usdz":"","mesh_url_glb":"","mesh_url":"","polished_mesh_url_usdz":"","polished_mesh_url_glb":"","polished_mesh_url":"","mesh_url_obj":"","mesh_url_zip":"","preview_mesh_url_zip":"","preview_mesh_url_glb":"","preview_mesh_url_usdz":"","mp4_url":"","designer_mesh_url":"","session_gif":"","user_image":"","percentage":0,"price":0,"status":"training_preview","source":"external","demo":false,"private":true,"debug":false,"random_poses":true,"inference":[{"image_name":"U1.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697095934_5899448/U1.png?se=2032-11-26T15%3A32%3A23Z&sp=r&sv=2022-11-02&sr=b&sig=nAjPwjBythOyq5MEgueVBeK1ZhlwOcvmB2EbeNjfYV0%3D","height":256,"width":256},{"image_name":"U2.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697095934_5899448/U2.png?se=2032-11-26T15%3A32%3A23Z&sp=r&sv=2022-11-02&sr=b&sig=VO3MHwAFSRNOZbCxyHy%2B8GhGTkbOhdT/MUPAFssqeTM%3D","height":256,"width":256},{"image_name":"U3.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697095934_5899448/U3.png?se=2032-11-26T15%3A32%3A23Z&sp=r&sv=2022-11-02&sr=b&sig=/H4ZYKyAoFsJ5rui6emxOBMaFHHSF/Ofxn9rgZai/T8%3D","height":256,"width":256},{"image_name":"U4.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697095934_5899448/U4.png?se=2032-11-26T15%3A32%3A23Z&sp=r&sv=2022-11-02&sr=b&sig=zs9bVvXbNRj0rfvqfWC3IhauqsEqIritZhRAfiGY/hw%3D","height":256,"width":256}],"output_id":"5d521768-0064-4282-b506-9b16a68403c1","auto_gen_3d":true,"server_type":"fast","model_version":"","is_deleted":false,"created_at":"2023-10-12T07:32:14.947Z","updated_at":"2023-10-12T07:32:25.763Z"}}
+
+    success?
+
+    A
+    sunflower
+
+    Test
+
+    https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-3xjxh87IjaEnBdHCi9cTJVDA.png?st=2023-10-12T06%3A34%3A20Z&se=2023-10-12T08%3A34%3A20Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-12T02%3A10%3A42Z&ske=2023-10-13T02%3A10%3A42Z&sks=b&skv=2021-08-06&sig=%2BWPHXDqcVwTHETV/%2BTdySGFlTywL8Gqb9eadWoCROJY%3D
+
+
+    Assets/ImagesFolder/SjK-ukaohIaG0zbJXwiV_w.png
+
+
+    Image
+    uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/SjK-ukaohIaG0zbJXwiV_w.png
+
+
+    https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/SjK-ukaohIaG0zbJXwiV_w.png
+
+
+    {"error":"","message":"Created","statusCode":201,"data":{"_id":"6527a1868b91232507b93596","user_id":"64ea7f237b9108933c1c6d04","session_code":"SESSION_1697096070_4153977","image_url":"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/SjK-ukaohIaG0zbJXwiV_w.png","input_image":"","discord_user_id":"","user_name":"","email":"lincolncruz77@gmail.com","mesh_url_usdz":"","mesh_url_glb":"","mesh_url":"","polished_mesh_url_usdz":"","polished_mesh_url_glb":"","polished_mesh_url":"","mesh_url_obj":"","mesh_url_zip":"","preview_mesh_url_zip":"","preview_mesh_url_glb":"","preview_mesh_url_usdz":"","mp4_url":"","designer_mesh_url":"","session_gif":"","user_image":"","percentage":0,"price":0,"status":"training_preview","source":"external","demo":false,"private":true,"debug":false,"random_poses":true,"inference":[{"image_name":"U1.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697096070_4153977/U1.png?se=2032-11-26T15%3A34%3A38Z&sp=r&sv=2022-11-02&sr=b&sig=pGaJQJCuoMUJ5kdLCAl2jyqheTyAj9pUX9nZZ9X3/eg%3D","height":256,"width":256},{"image_name":"U2.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697096070_4153977/U2.png?se=2032-11-26T15%3A34%3A38Z&sp=r&sv=2022-11-02&sr=b&sig=PeUS9Mw6fReBfFR3bGZCBPLbDnpJbLy/hT%2BxSn5e4sg%3D","height":256,"width":256},{"image_name":"U3.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697096070_4153977/U3.png?se=2032-11-26T15%3A34%3A38Z&sp=r&sv=2022-11-02&sr=b&sig=acCUosrzHV49vVxZl70yBp7Mgvj77GazkX4pLmGH3Ao%3D","height":256,"width":256},{"image_name":"U4.png","image_url":"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697096070_4153977/U4.png?se=2032-11-26T15%3A34%3A38Z&sp=r&sv=2022-11-02&sr=b&sig=xvGew4AbiUCAyZkq/PfGzPoJozG/kx/SGU5qILZMQH0%3D","height":256,"width":256}],"output_id":"58673a94-872a-43b3-b981-b1774668e4dd","auto_gen_3d":true,"server_type":"fast","model_version":"","is_deleted":false,"created_at":"2023-10-12T07:34:30.373Z","updated_at":"2023-10-12T07:34:40.894Z"}}
 
     success?
 
@@ -399,8 +434,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ce570000
-    m_LastClickedID: 22478
+    m_SelectedIDs: ca570000
+    m_LastClickedID: 22474
     m_ExpandedIDs: 00000000c057000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -559,7 +594,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: fa570000
+      m_SelectedIDs: f4570000
       m_LastClickedID: 0
       m_ExpandedIDs: 36fbffff
       m_RenameOverlay:

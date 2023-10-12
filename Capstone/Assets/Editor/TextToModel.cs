@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
+using UnityEditor.Scripting.Python;
 using System.IO;
 
 public class TextToModel : EditorWindow
@@ -47,7 +48,9 @@ public class TextToModel : EditorWindow
         Debug.Log("Test");
 
         //Writes and saves
-        File.WriteAllText(Application.dataPath + "/LastPrompt.txt", strPrompt);
+        File.WriteAllText(Application.dataPath + "/Editor/LastPrompt.json", strPrompt);
+
+        PythonRunner.RunFile("Assets/PythonScripts/CreateModel.py");
 
         Debug.Log("End?");
     }

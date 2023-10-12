@@ -7,7 +7,7 @@ import requests
 import json
 #from PIL import Image
 
-#insert key stuff here
+#iNSERT CODE HERE
 
 #create image
 createdImage = openai.Image.create(
