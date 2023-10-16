@@ -26,7 +26,16 @@ file.close()
 print("Test")
 
 
-#insert code here
+#aws stuff
+awsAccessKeyId = "AKIAYAO4I4IRY2NXGMW5"
+awsSecretAccessKey = "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"
+bucketName = "texttomodelbucket"
+
+#bucket stuff
+s3 = boto3.client('s3', aws_access_key_id=awsAccessKeyId, aws_secret_access_key=awsSecretAccessKey)
+
+#OpenAI stuff
+openai.api_key = "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"
 
 #create image
 createdImage = openai.Image.create(
@@ -67,7 +76,6 @@ awsURL = "https://s3.amazonaws.com/{}/{}".format(bucketName, s3Key)
 
 #debug
 print(awsURL + "\n")
-
 
 #3dmodel stuff
 url1 = "https://api.csm.ai:5566/image-to-3d-sessions"
