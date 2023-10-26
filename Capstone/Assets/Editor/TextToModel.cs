@@ -4,29 +4,45 @@ using UnityEngine.UIElements;
 using UnityEditor.UIElements;
 using UnityEditor.Scripting.Python;
 using System.IO;
+using System.Text.Json;
 using UnityEngine.UI;
 using Button = UnityEngine.UIElements.Button;
+using Image = UnityEngine.UIElements.Image;
+using Palmmedia.ReportGenerator.Core.Common;
 
 public class TextToModel : EditorWindow
 {
     TextField tf;
-    private string inputText;
+    //Texture refImage;
+    //private string inputText;
 
     [MenuItem("Capstone/Text To 3D Asset")]
     public static void ShowExample()
     {
         TextToModel wnd = GetWindow<TextToModel>("TextToModel");
-        //wnd.titleContent = new GUIContent("TextToModel");
-        wnd.maxSize = new Vector2(530f, 530f);
+        wnd.maxSize = new Vector2(470f, 750f);
         wnd.minSize = wnd.maxSize;
         var position = wnd.position;
 
         position.center = new Rect(215f, 215f, Screen.currentResolution.width / 2, Screen.currentResolution.height / 2).center;
         wnd.position = position;
+
+        Debug.Log("Happens second");
     }
 
     public void CreateGUI()
-    {
+    {   
+        Debug.Log("Happens first");
+
+        Texture2D refImage = (Texture2D)EditorGUIUtility.Load("Assets/ImagesFolder/YCNFys4TChQAclNfolUqKQ.pg");
+
+        if(refImage == null)
+        {
+            refImage = (Texture2D)EditorGUIUtility.Load("Assets/ImagesFolder/placeholder.png");
+        }
+
+        Debug.Log(refImage);
+
         //Title and main container
         VisualElement container = new VisualElement();
         rootVisualElement.Add(container);
@@ -36,7 +52,8 @@ public class TextToModel : EditorWindow
         rootVisualElement.styleSheets.Add(styleSheet);
 
         //some text
-        Label title = new Label("Insert your prompt below");
+        Label title = new Label("Insert your prompt into the text field below");
+        //title.AddToClassList("label-title");
         container.Add(title);
 
         //button and input section
@@ -44,27 +61,42 @@ public class TextToModel : EditorWindow
 
         //buttons and inputs created
         Button makeModel = new Button() { text = "Create Model" };
-        Button closeWindow = new Button() { text = "Close" };
+        //Button closeWindow = new Button() { text = "Create Model Faster" };
         TextField inputField = new TextField();
         tf = inputField;
 
-        closeWindow.AddToClassList("dark-button");
+        //adds styling to the buttons
+        makeModel.AddToClassList("dark-button");
+        //closeWindow.AddToClassList("dark-button");
+        inputField.AddToClassList("text-field");
 
         //events for buttons clicked
         makeModel.clicked += CreatePrompt;
-        closeWindow.clicked += CloseWindow;
+        //closeWindow.clicked += TestFunction;
 
         //adding to button container
         buttonContainer.Add(inputField);
         buttonContainer.Add(makeModel);
-        buttonContainer.Add(closeWindow);
+        //buttonContainer.Add(closeWindow);
 
         //adding button container to container
         container.Add(buttonContainer);
 
-        //Debug
-        /*Debug.Log(container.panel);
-        Debug.Log(rootVisualElement.panel);*/
+        //image section
+        VisualElement imageContainer = new VisualElement();
+        
+        //creates reference image
+        Image imageHold = new Image();
+        imageHold.image = refImage;
+        
+        //adds styling to image
+        imageHold.AddToClassList("resize-image");
+
+        //adds image to container
+        imageContainer.Add(imageHold);
+
+        //adds image container to container
+        container.Add(imageHold);
     }
 
     public void OnGUI()
@@ -84,8 +116,6 @@ public class TextToModel : EditorWindow
         //Takes the prompt class and turns it into json
         string strPrompt = JsonUtility.ToJson(p);
 
-        Debug.Log("Test");
-
         //Writes and saves
         File.WriteAllText(Application.dataPath + "/Editor/LastPrompt.json", strPrompt);
 
@@ -93,11 +123,56 @@ public class TextToModel : EditorWindow
         PythonRunner.RunFile("Assets/PythonScripts/CreateModel.py");
 
         Debug.Log("End?");
+
+        PlaceAsset();
     }
 
-    public void CloseWindow()
+    public void PlaceAsset()
     {
-        //Debug.Log(tf.value);
-        Close();
+        AssetDatabase.Refresh();
+
+        //reads the json file and puts text into string
+        string text = File.ReadAllText("Assets/Models/AssetFilePath.json");
+
+        //creates a assetfilepath class and overwrites the class with a new class from the json file
+        AssetFilePath filepath = new AssetFilePath();
+        JsonUtility.FromJsonOverwrite(text, filepath);
+
+        Debug.Log(filepath.textFilePath);
+
+        //loads the mesh
+        var test = (GameObject)EditorGUIUtility.Load(filepath.textFilePath);
+
+        Debug.Log(test);
+
+        //scaling stuff
+        test.transform.localScale = new Vector3(4, 4, 4);
+        
+        //instantiates the object
+        PrefabUtility.InstantiatePrefab(test);
+
+        Debug.Log("Success");
+    }
+
+    public void TestFunction()
+    {
+        PythonRunner.RunFile("Assets/PythonScripts/NewTestScript.py");
+        string text = File.ReadAllText("Assets/Test/AssetFilePath.json");
+        Debug.Log(text);
+
+
+        AssetFilePath filePath = new AssetFilePath();
+        JsonUtility.FromJsonOverwrite(text, filePath);
+        
+        Debug.Log(filePath.textFilePath);
+
+        var test = (GameObject)EditorGUIUtility.Load(filePath.textFilePath);
+
+        Debug.Log(test);
+        test.transform.localScale = new Vector3(4, 4, 4);
+
+        PrefabUtility.InstantiatePrefab(test);
+
+        //Debug.Log("Wprl?");
     }
 }
