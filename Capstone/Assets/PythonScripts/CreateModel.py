@@ -26,7 +26,6 @@ file.close()
 #debug
 #print("Test")
 
-
 #aws stuff
 awsAccessKeyId = "AKIAYAO4I4IRY2NXGMW5"
 awsSecretAccessKey = "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"
@@ -56,6 +55,16 @@ imageURL = createdImage['data'][0]['url']
 
 #generates a random name for the file
 imageName = "Assets/ImagesFolder/" + secrets.token_urlsafe(16) + ".png"
+
+filePathData = {
+    "textFilePath": imageName
+}
+
+saveImageFilePath = open("Assets/Models/RefImageFilePath.json", "w")
+
+json.dump(filePathData, saveImageFilePath, indent=6)
+
+saveImageFilePath.close()
 
 #debug
 #print(imageName + "\n")
@@ -111,7 +120,7 @@ failsafe = 0
 folderURL = ""
 
 #debug
-testSessionID = "SESSION_1696460520_5958833"
+#testSessionID = "SESSION_1696460520_5958833"
 
 #loops until it hits the failsafe, or gets the preview model
 while(folderURL == "" and failsafe < 30):
@@ -164,7 +173,7 @@ saveFilePath = open("Assets/Models/AssetFilePath.json", "w")
 
 json.dump(textData, saveFilePath, indent = 6)
 
-saveFilePath.close
+saveFilePath.close()
 
 print("almost there")
 

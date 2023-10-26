@@ -9,11 +9,14 @@ using UnityEngine.UI;
 using Button = UnityEngine.UIElements.Button;
 using Image = UnityEngine.UIElements.Image;
 using Palmmedia.ReportGenerator.Core.Common;
+using System;
+using System.Drawing.Printing;
 
 public class TextToModel : EditorWindow
 {
     TextField tf;
-    //Texture refImage;
+    Texture2D refImage = null;
+    bool firstTime = true;
     //private string inputText;
 
     [MenuItem("Capstone/Text To 3D Asset")]
@@ -33,12 +36,16 @@ public class TextToModel : EditorWindow
     public void CreateGUI()
     {   
         Debug.Log("Happens first");
+        Debug.Log(refImage);
 
-        Texture2D refImage = (Texture2D)EditorGUIUtility.Load("Assets/ImagesFolder/YCNFys4TChQAclNfolUqKQ.pg");
+        string debug = File.ReadAllText("Assets/Models/RefImageFilePath.json");
+        Debug.Log(debug);
 
-        if(refImage == null)
+        //places placeholder image
+        if (firstTime)
         {
             refImage = (Texture2D)EditorGUIUtility.Load("Assets/ImagesFolder/placeholder.png");
+            firstTime = false;
         }
 
         Debug.Log(refImage);
@@ -151,6 +158,9 @@ public class TextToModel : EditorWindow
         //instantiates the object
         PrefabUtility.InstantiatePrefab(test);
 
+        //updates image
+        UpdateImage();
+
         Debug.Log("Success");
     }
 
@@ -174,5 +184,19 @@ public class TextToModel : EditorWindow
         PrefabUtility.InstantiatePrefab(test);
 
         //Debug.Log("Wprl?");
+    }
+
+    public void UpdateImage()
+    {
+        //looks for image and sets it in editor
+        if (File.Exists("Assets/Models/RefImageFilePath.json"))
+        {
+            string text = File.ReadAllText("Assets/Models/RefImageFilePath.json");
+            AssetFilePath filepath = new AssetFilePath();
+            JsonUtility.FromJsonOverwrite(text, filepath);
+            refImage = (Texture2D)EditorGUIUtility.Load("Assets/ImagesFolder/YCNFys4TChQAclNfolUqKQ.pg");
+        }
+
+        CreateGUI();
     }
 }
