@@ -349,6 +349,7 @@
 "Assets/PythonScripts/CreateImage.cs"
 "Assets/PythonScripts/CreateModel.cs"
 "Assets/PythonScripts/ExecuteTestScript.cs"
+"Assets/PythonScripts/NewImageToModel.cs"
 -langversion:9.0
 
 /deterministic

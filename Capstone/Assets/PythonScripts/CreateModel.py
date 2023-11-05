@@ -6,65 +6,63 @@ import requests
 import json
 import time
 import zipfile
-#from PIL import Image
+def createFile(fileName, content):
+    #filepathdata
+    FPD = {
+        "textFilePath": content
+    }
+    
+    saveFile = open(fileName, "w")
+    
+    json.dump(FPD, saveFile, indent=6)
+    
+    saveFile.close()
 
 #open file
 file = open('Assets/Editor/LastPrompt.json')
+fileKey1 = open('Assets/Keys/OpenAIKey.json')
+fileKey2 = open('Assets/Keys/CSMKey.json')
 
 #grab data from file
 data = json.load(file)
+dataKey1 = json.load(fileKey1)
+dataKey2 = json.load(fileKey2)
 
 #grabs prompt
 test1 = data.get('prompt')
 
-#debug
-#print(test1)
-
 #closes file
 file.close()
+fileKey1.close()
+fileKey2.close()
 
-#debug
-#print("Test")
-
-#aws stuff
+#aws variables
 awsAccessKeyId = "AKIAYAO4I4IRY2NXGMW5"
 awsSecretAccessKey = "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"
 bucketName = "texttomodelbucket"
 
-#bucket stuff
+#connecting to container
 s3 = boto3.client('s3', aws_access_key_id=awsAccessKeyId, aws_secret_access_key=awsSecretAccessKey)
 
-#OpenAI stuff
-openai.api_key = "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"
+#OpenAI key
+#openai.api_key = "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"
+openai.api_key = dataKey1.get('key')
 
 #create image
 createdImage = openai.Image.create(
     prompt=test1,
     n=1,
-    size="1024x1024",
+    size="256x256",
 )
-
-#debug
-#print(createdImage)
 
 #grabs url from OpenAI
 imageURL = createdImage['data'][0]['url']
 
-#debug
-#print(imageURL + "\n")
-
 #generates a random name for the file
 imageName = "Assets/ImagesFolder/" + secrets.token_urlsafe(16) + ".png"
 
-filePathData = {
-    "textFilePath": imageName
-}
-
-saveImageFilePath = open("Assets/Models/RefImageFilePath.json", "w")
-
-json.dump(filePathData, saveImageFilePath, indent=6)
-
-saveImageFilePath.close()
+#create filepath for reference image
+createFile("Assets/Models/RefImageFilePath.json", imageName)
 
 #debug
 #print(imageName + "\n")
@@ -75,7 +73,7 @@ urllib.request.urlretrieve(imageURL, imageName)
 #"local" path
 localPath = imageName
 
-#folder path for bucket
+#folder path for container
 s3Key = "testFolder/{}".format(imageName)
 
 try:
@@ -86,9 +84,6 @@ except Exception as e:
 
 #url to the image in aws
 awsURL = "https://s3.amazonaws.com/{}/{}".format(bucketName, s3Key)
-
-#debug
-#print(awsURL + "\n")
 
 #3dmodel stuff
 url1 = "https://api.csm.ai:5566/image-to-3d-sessions"
@@ -108,8 +103,6 @@ response = requests.request("POST", url1, headers=headers, data=payload)
 
 #stores the data from the post
 modelData = response.text
-print(response.text)
-print("")
 
 #turns data into a json file to grab more easily
 modelDataJSON = json.loads(modelData)
@@ -119,11 +112,8 @@ sessionID = modelDataJSON['data']['session_code']
 failsafe = 0
 folderURL = ""
 
-#debug
-#testSessionID = "SESSION_1696460520_5958833"
-
 #loops until it hits the failsafe, or gets the preview model
-while(folderURL == "" and failsafe < 30):
+while(folderURL == "" and failsafe < 15):
     failsafe += 1
     time.sleep(150)
     
@@ -137,14 +127,9 @@ while(folderURL == "" and failsafe < 30):
     
     newResponse = requests.request("GET", url2, headers=newHeaders, data=newPayload)
     modelFolder = newResponse.text
-    
-    print(modelFolder)
-    print("")
 
     modelFolderJSON = json.loads(modelFolder)
     folderURL = modelFolderJSON['data'][0]['preview_mesh_url_zip']
-
-print(folderURL + "/n")
 
 #filepath of the folder
 finalURLName = "Assets/Models/" + sessionID + ".zip"
@@ -156,24 +141,10 @@ urllib.request.urlretrieve(folderURL, finalURLName)
 with zipfile.ZipFile(finalURLName,"r") as zip_ref:
     zip_ref.extractall("Assets/Models/ModelFolders")
 
-#textFilePath = "Assets/Models/AssetPath.txt"
-#filePathObj = "Assets/Models/ModelFolders/" + sessionID + "/mesh.obj"
-
+#create filepath name for session mesh
 tempText = "Assets/Models/ModelFolders/" + sessionID + "/mesh.obj"
 
-textData = {
-    "textFilePath": tempText
-}
-
-#with open(textFilePath, 'w') as textSave:
-#    textSave.write(filePathObj)
-#    textSave.close()
-
-saveFilePath = open("Assets/Models/AssetFilePath.json", "w")
-
-json.dump(textData, saveFilePath, indent = 6)
-
-saveFilePath.close()
+#create a filepath for asset
+createFile("Assets/Models/AssetFilePath.json", tempText)
 
 print("almost there")
-

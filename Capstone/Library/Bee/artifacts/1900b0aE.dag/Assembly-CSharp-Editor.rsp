@@ -362,8 +362,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Editor/AssetFilePath.cs"
+"Assets/Editor/CreationSettings.cs"
+"Assets/Editor/KeyClass.cs"
 "Assets/Editor/PromptClass.cs"
 "Assets/Editor/TextToModel.cs"
+"Assets/Editor/TTMSettings.cs"
+"Assets/Editor/WindowPopup.cs"
 -langversion:9.0
 
 /deterministic

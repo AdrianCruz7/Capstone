@@ -20,7 +20,7 @@ MonoBehaviour:
     height: 5.6
   m_ShowMode: 0
   m_Title: 
-  m_RootView: {fileID: 6}
+  m_RootView: {fileID: 17}
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_Maximized: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
     height: 5.6
   m_ShowMode: 0
   m_Title: 
-  m_RootView: {fileID: 7}
+  m_RootView: {fileID: 18}
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_Maximized: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     height: 5.6
   m_ShowMode: 0
   m_Title: 
-  m_RootView: {fileID: 8}
+  m_RootView: {fileID: 19}
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_Maximized: 0
@@ -92,11 +92,275 @@ MonoBehaviour:
     height: 5.6
   m_ShowMode: 0
   m_Title: 
-  m_RootView: {fileID: 9}
+  m_RootView: {fileID: 20}
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_Maximized: 0
 --- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 21}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 22}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 23}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 24}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 25}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 26}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 27}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 28}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 29}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 30}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 5.6
+  m_ShowMode: 0
+  m_Title: 
+  m_RootView: {fileID: 31}
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_Maximized: 0
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -115,12 +379,12 @@ MonoBehaviour:
     width: 2048
     height: 1196.8
   m_ShowMode: 4
-  m_Title: Inspector
-  m_RootView: {fileID: 14}
+  m_Title: Console
+  m_RootView: {fileID: 36}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &6
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +407,7 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
   vertical: 0
   controlID: 0
---- !u!114 &7
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +430,7 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
   vertical: 0
   controlID: 0
---- !u!114 &8
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,7 +453,7 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
   vertical: 0
   controlID: 0
---- !u!114 &9
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,7 +476,260 @@ MonoBehaviour:
   m_MaxSize: {x: 0, y: 0}
   vertical: 0
   controlID: 0
---- !u!114 &10
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &24
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &25
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &26
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &27
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &28
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &29
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &30
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &31
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  vertical: 0
+  controlID: 0
+--- !u!114 &32
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,8 +742,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 17}
-  - {fileID: 11}
+  - {fileID: 39}
+  - {fileID: 33}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -236,8 +753,8 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 95
---- !u!114 &11
+  controlID: 57
+--- !u!114 &33
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,12 +775,12 @@ MonoBehaviour:
     height: 1146.8
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 44}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 44}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &34
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,12 +801,12 @@ MonoBehaviour:
     height: 572.8
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 45}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 45}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &13
+--- !u!114 &35
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -299,7 +816,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -308,16 +825,16 @@ MonoBehaviour:
     y: 572.8
     width: 1579.2
     height: 574.00006
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 48}
   m_Panes:
-  - {fileID: 21}
-  - {fileID: 26}
-  - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &14
+  - {fileID: 43}
+  - {fileID: 48}
+  - {fileID: 42}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &36
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,9 +847,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 15}
-  - {fileID: 10}
-  - {fileID: 16}
+  - {fileID: 37}
+  - {fileID: 32}
+  - {fileID: 38}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -345,7 +862,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &15
+--- !u!114 &37
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -367,7 +884,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &16
+--- !u!114 &38
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,7 +905,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &17
+--- !u!114 &39
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,8 +918,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 18}
-  - {fileID: 13}
+  - {fileID: 40}
+  - {fileID: 35}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -412,8 +929,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 96
---- !u!114 &18
+  controlID: 58
+--- !u!114 &40
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -426,8 +943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 19}
+  - {fileID: 34}
+  - {fileID: 41}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -437,8 +954,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 97
---- !u!114 &19
+  controlID: 59
+--- !u!114 &41
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -459,13 +976,13 @@ MonoBehaviour:
     height: 572.8
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 46}
   m_Panes:
-  - {fileID: 24}
-  - {fileID: 25}
+  - {fileID: 46}
+  - {fileID: 47}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &20
+--- !u!114 &42
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -494,81 +1011,34 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
     m_OverlaysVisible: 1
-  m_code: "import requests\r\nimport json\r\nimport urllib.request\n\ntestSessionID
-    = \"SESSION_1696460520_5958833\"\r\n\nurl = \"https://api.csm.ai:5566/image-to-3d-sessions/get-mesh/SESSION_1696460520_5958833\"\r\npayload
-    = \"\"\r\nheaders = {\r\n  'x-api-key': 'Ee26c558fb722788e0eecd22d3bE6c5E',\r\n}\r\nresponse
-    = requests.request(\"GET\", url, headers=headers, data=payload)\r\n\r\nmodelFolder
-    = response.text\r\nmodelFolderJSON = json.loads(modelFolder)\r\nfolderURL = modelFolderJSON['data'][0]['mesh_url_zip']\n\r\nfinalURLName
-    = \"Assets/Test/\" + testSessionID + \".zip\"\n\nurllib.request.urlretrieve(folderURL,
-    finalURLName)\n\n#unzipping\r\nwith zipfile.ZipFile(finalURLName,\"r\") as zip_ref:\r\n   
-    zip_ref.extractall(\"Assets/Test/TestFolders\")\r\n\r\ntextFilePath = \"Assets/Test/AssetPath.txt\"\r\nfilePathObj
-    = \"Assets/Test/TestFolders/\" + testSessionID + \"/mesh.obj\"\r\n\r\nwith open(textFilePath,
-    'w') as textSave:\r\n    textSave.write(filePathObj)\r\n    textSave.close()\n\nprint(\"almost
-    there\")"
-  m_outputContents: "https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\na low poly tree with orange leaves and a white background\nTest\n{\n 
-    \"created\": 1697970802,\n  \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-bVWgOAXszvqDPS7QpQJtowpH.png?st=2023-10-22T09%3A33%3A22Z&se=2023-10-22T11%3A33%3A22Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-22T00%3A23%3A39Z&ske=2023-10-23T00%3A23%3A39Z&sks=b&skv=2021-08-06&sig=/KHlL0s42FUcLiyCiW3Ian93jxWSOK%2B6JoNfqrMEWgk%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/p_f8QLMzR35j39NJEnNVYQ.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"6534fa7c756334e98561079d\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1697970812_5167184\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/p_f8QLMzR35j39NJEnNVYQ.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/U1.png?se=2032-12-06T18%3A33%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=H2XNJyRLGzJrG0iQ%2B0DAtW7wtJimAkwOji8IpiEYREw%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/U2.png?se=2032-12-06T18%3A33%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=FjnexqLCWSjV%2BEPJP3zslYTOYPx32CWgzCFP6F7ijMo%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/U3.png?se=2032-12-06T18%3A33%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=7GAK4fQKpDRhZi7InZQ9J/cQf%2BWO0lQ3b6VRiESGVWs%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/U4.png?se=2032-12-06T18%3A33%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=TXnBpOx4tZa%2Bmxz3b6PMUpuekp9SIeIdxFEHWJPB4k4%3D\",\"height\":256,\"width\":256}],\"output_id\":\"7171d0b8-0892-4676-94cc-97b17b274ce5\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-22T10:33:32.160Z\",\"updated_at\":\"2023-10-22T10:33:42.544Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/SESSION_1697970812_5167184_preview.zip?se=2033-10-19T10%3A44%3A26Z&sp=r&sv=2023-01-03&sr=b&sig=eqSJUslWaH8mq3grPCKzcDZorWqDig/w8HD%2Byc%2BQj04%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/mesh_preview.glb?se=2033-10-19T10%3A44%3A21Z&sp=r&sv=2023-01-03&sr=b&sig=ad3QODaK0ziG6%2B2cQJuREfn/yc6%2B7ox/d6Bz6OYHe2s%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/mesh_preview.usdz?se=2033-10-19T10%3A44%3A24Z&sp=r&sv=2023-01-03&sr=b&sig=tgnAV9GLqyQ1Z6itr7kevaXBSkesYnDTc1zjLblYmMs%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697970812_5167184/SESSION_1697970812_5167184_preview.zip?se=2033-10-19T10%3A44%3A26Z&sp=r&sv=2023-01-03&sr=b&sig=eqSJUslWaH8mq3grPCKzcDZorWqDig/w8HD%2Byc%2BQj04%3D/n\nalmost
-    there\na low poly tree with black leaves and a white background\nTest\n{\n  \"created\":
-    1697972085,\n  \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-dzWcWxFOthHaEHOk6QTiwZcy.png?st=2023-10-22T09%3A54%3A45Z&se=2023-10-22T11%3A54%3A45Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-22T00%3A24%3A13Z&ske=2023-10-23T00%3A24%3A13Z&sks=b&skv=2021-08-06&sig=pA1FNIWWpmPVk96mSl2MLOFD6SaKIcAsi3N0keQzLKU%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/WNt9iLicAgOgpbcHUymnGA.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"6534ff7e756334e985611e64\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1697972094_4345645\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/WNt9iLicAgOgpbcHUymnGA.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/U1.png?se=2032-12-06T18%3A55%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=UYJHqGAoMkhmsc70Dk/7HRKFTK8lLUKQl%2BiBh0/3ouE%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/U2.png?se=2032-12-06T18%3A55%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=MYTIjHqYnwbSNS5rR7RmYV/AJZ0amv/cFIp9UFCSXu0%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/U3.png?se=2032-12-06T18%3A55%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=EhbUjH%2Bz6Q5GQyJFSYhOnGKR7LqoogYKXgaVIbNiA5Y%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/U4.png?se=2032-12-06T18%3A55%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=ZiIyfakjbj4L2FSaK6Gs5rSiTsbCTJLXwBMniU1lsOw%3D\",\"height\":256,\"width\":256}],\"output_id\":\"cb66276e-88c4-43ee-9b75-9202433f1ae9\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-22T10:54:54.998Z\",\"updated_at\":\"2023-10-22T10:55:05.396Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/SESSION_1697972094_4345645_preview.zip?se=2033-10-19T11%3A11%3A10Z&sp=r&sv=2023-01-03&sr=b&sig=FFA5%2BDHwBBeyYwW68OM1d4FHpRnz5fDMCxQ3aHg3pEQ%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/mesh_preview.glb?se=2033-10-19T11%3A11%3A06Z&sp=r&sv=2023-01-03&sr=b&sig=TLrABBh4yGXwsTgQON8u77QZo%2BjgWyHU/jnhpttFZj0%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/mesh_preview.usdz?se=2033-10-19T11%3A11%3A08Z&sp=r&sv=2023-01-03&sr=b&sig=plz51vfvEMC/neUidjzfidGba0ciO76gT9UMkV2bVDk%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697972094_4345645/SESSION_1697972094_4345645_preview.zip?se=2033-10-19T11%3A11%3A10Z&sp=r&sv=2023-01-03&sr=b&sig=FFA5%2BDHwBBeyYwW68OM1d4FHpRnz5fDMCxQ3aHg3pEQ%3D/n\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\na low poly tree with a white background\nTest\n{\n  \"created\": 1698001934,\n 
-    \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-6ELQMwFbU1ei3luhDuxbgDwv.png?st=2023-10-22T18%3A12%3A14Z&se=2023-10-22T20%3A12%3A14Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-21T23%3A51%3A35Z&ske=2023-10-22T23%3A51%3A35Z&sks=b&skv=2021-08-06&sig=TrGgTNQihUrU6g3%2BVtGjOrrGHDHx8MCzTbSY9K67Sag%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/B0KPyEKfJ14n_bfm8BLRTA.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"65357419833d5ee29a4ee00f\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1698001945_7017105\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/B0KPyEKfJ14n_bfm8BLRTA.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698001945_7017105/U1.png?se=2032-12-07T03%3A12%3A34Z&sp=r&sv=2022-11-02&sr=b&sig=S7R8t/YI1XBuhV%2B8/k1dY4FvAd5rf%2BBCoTeJ3bwBs84%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698001945_7017105/U2.png?se=2032-12-07T03%3A12%3A34Z&sp=r&sv=2022-11-02&sr=b&sig=SEwakzumjZpSzn8FEHrGmiohe5FLYLpokF4RERsVqd8%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698001945_7017105/U3.png?se=2032-12-07T03%3A12%3A34Z&sp=r&sv=2022-11-02&sr=b&sig=QFy0Wrs8hDqZtJ0vYIjRhJz1hYCGZen0ZnRpI5O4cbo%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698001945_7017105/U4.png?se=2032-12-07T03%3A12%3A34Z&sp=r&sv=2022-11-02&sr=b&sig=mFDIVMYKcYN2YI25dOEZO3wxyq3PC37ErEti3lavT18%3D\",\"height\":256,\"width\":256}],\"output_id\":\"35cb910d-0f5b-4df1-aa47-fe51545ba4d6\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-22T19:12:25.860Z\",\"updated_at\":\"2023-10-22T19:12:36.172Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\na
-    low poly tree with a white background\nTest\n{\n  \"created\": 1698003240,\n 
-    \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-j9TYun2hgJJSU8rhSEyRSiij.png?st=2023-10-22T18%3A34%3A00Z&se=2023-10-22T20%3A34%3A00Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-21T23%3A23%3A13Z&ske=2023-10-22T23%3A23%3A13Z&sks=b&skv=2021-08-06&sig=77WcEXHHXB9GtYxzbBYPdNunQPKy7WGBykI34FT6kgQ%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/R8r1HTGBiL6Ci_Yunkhu_w.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"6535793400f6ce78a45e0fac\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1698003252_7441224\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/R8r1HTGBiL6Ci_Yunkhu_w.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/U1.png?se=2032-12-07T03%3A34%3A21Z&sp=r&sv=2022-11-02&sr=b&sig=9Ty/%2BBWSqjardJlWzmKr/lr4V7piNRy9zD63SIq0zXw%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/U2.png?se=2032-12-07T03%3A34%3A21Z&sp=r&sv=2022-11-02&sr=b&sig=DO0eXen0%2B3PrfF1fLMxMJJId4N5LmSGxge8P1sDvcRI%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/U3.png?se=2032-12-07T03%3A34%3A21Z&sp=r&sv=2022-11-02&sr=b&sig=JIVCkjhi/gRejv5cFJfp7JREym50%2BRapCfAwJ3DkIs8%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/U4.png?se=2032-12-07T03%3A34%3A21Z&sp=r&sv=2022-11-02&sr=b&sig=N6/JvRLZkAD69v3cG41OTIOwwaKLkBvmo5e/lOtHNK0%3D\",\"height\":256,\"width\":256}],\"output_id\":\"cd8b52db-0694-4e59-8f16-88df5b3dc548\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-22T19:34:12.852Z\",\"updated_at\":\"2023-10-22T19:34:23.278Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/SESSION_1698003252_7441224_preview.zip?se=2033-10-19T19%3A53%3A13Z&sp=r&sv=2023-01-03&sr=b&sig=4tazUDbmqxpe7PBknwIJr1FEmTlU4vsAEaKCAuLUkkA%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/mesh_preview.glb?se=2033-10-19T19%3A53%3A08Z&sp=r&sv=2023-01-03&sr=b&sig=xjqQrM1XD2EhUErElCmT3BVSAEhwk7tL9/bDtgNOM24%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/mesh_preview.usdz?se=2033-10-19T19%3A53%3A10Z&sp=r&sv=2023-01-03&sr=b&sig=yUFJWAsYrT4Iwx24mfwgb7u9a%2BYfyXamhGY70fKnV2U%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698003252_7441224/SESSION_1698003252_7441224_preview.zip?se=2033-10-19T19%3A53%3A13Z&sp=r&sv=2023-01-03&sr=b&sig=4tazUDbmqxpe7PBknwIJr1FEmTlU4vsAEaKCAuLUkkA%3D/n\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1696460520_5958833/SESSION_1696460520_5958833.zip?se=2033-10-02T00%3A45%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=LclWxF6DgvpWB1zCMZxuN//f7JtdBee1r4AxA/rp5Ss%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\na low poly tree with blue leaves and a white background\nTest\n{\n  \"created\":
-    1698123909,\n  \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-TAQDDAZL6BcU592B3nfTGDul.png?st=2023-10-24T04%3A05%3A09Z&se=2023-10-24T06%3A05%3A09Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-24T03%3A44%3A47Z&ske=2023-10-25T03%3A44%3A47Z&sks=b&skv=2021-08-06&sig=PvqGEwM9%2BIyt2TOELbto8DkzqOK%2BYK4%2B1bLl3MHjE3M%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/0KFviyW7lRV5Rj1MH4DpGQ.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"65375097eabccb0d20145e51\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1698123927_3035670\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/0KFviyW7lRV5Rj1MH4DpGQ.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/U1.png?se=2032-12-08T13%3A05%3A36Z&sp=r&sv=2022-11-02&sr=b&sig=tihirxZfZxb/JKhcpNp18Wm1V7QKvgaOOtiCrtod%2B84%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/U2.png?se=2032-12-08T13%3A05%3A36Z&sp=r&sv=2022-11-02&sr=b&sig=Cksq/Nd197WmV4/Lp9dP4/qNQxbOCV6XZHqTHS1/8ZY%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/U3.png?se=2032-12-08T13%3A05%3A36Z&sp=r&sv=2022-11-02&sr=b&sig=nDdKxxGpmp2mOKGO885Z0jJH0WCZ9gKn2pbx%2B%2Bfe%2BNI%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/U4.png?se=2032-12-08T13%3A05%3A36Z&sp=r&sv=2022-11-02&sr=b&sig=QmKM8ebmVebMgi20ycOkxcicd8l0QbIiWffs5DsSso0%3D\",\"height\":256,\"width\":256}],\"output_id\":\"25fac656-3395-46d4-ac95-36ecbabfb4cf\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-24T05:05:27.955Z\",\"updated_at\":\"2023-10-24T05:05:38.816Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/SESSION_1698123927_3035670_preview.zip?se=2033-10-21T05%3A20%3A03Z&sp=r&sv=2023-01-03&sr=b&sig=nIUtwJSYXaFa3G%2B%2BCpOo/j31SQf6kpxGxzpVtPftQXM%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/mesh_preview.glb?se=2033-10-21T05%3A19%3A58Z&sp=r&sv=2023-01-03&sr=b&sig=hpNCmTA2XPotgu9tXYm718Ly8PSdIat0/EPHt12F07s%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/mesh_preview.usdz?se=2033-10-21T05%3A20%3A00Z&sp=r&sv=2023-01-03&sr=b&sig=uOUV1WdN4kE2PYPZK9rLNBZdBqqLMbWB0WNjUAgRzyE%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698123927_3035670/SESSION_1698123927_3035670_preview.zip?se=2033-10-21T05%3A20%3A03Z&sp=r&sv=2023-01-03&sr=b&sig=nIUtwJSYXaFa3G%2B%2BCpOo/j31SQf6kpxGxzpVtPftQXM%3D/n\nalmost
-    there\na low poly tree with orange leaves and a white background\nTest\n{\n 
-    \"created\": 1698125674,\n  \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-QIyOjY1InkXnZlTZ2VTRxrbO.png?st=2023-10-24T04%3A34%3A34Z&se=2023-10-24T06%3A34%3A34Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-24T04%3A03%3A38Z&ske=2023-10-25T04%3A03%3A38Z&sks=b&skv=2021-08-06&sig=ECcorjRttRmUSEdLEJuJ%2BHM03zWdsMonTC1CTeO3XE8%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/RMbFQJP_T8dFpkHyv3jvzQ.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"65375778eabccb0d20147b4d\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1698125688_6835080\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/RMbFQJP_T8dFpkHyv3jvzQ.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/U1.png?se=2032-12-08T13%3A35%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=i%2BRWl7AcSOlX3T%2B0J1TgQSJdZAU2tRXwsPkhjcJ1ivs%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/U2.png?se=2032-12-08T13%3A35%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=1CERBQlcip%2B/DzmuCYLJWMPyJM/NkW%2B/OaMohrC547s%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/U3.png?se=2032-12-08T13%3A35%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=oV0O9Ww0M3M4Qc%2B3D6sZ6I7nbQ0wnWZ2hpLleRdqG1M%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/U4.png?se=2032-12-08T13%3A35%3A03Z&sp=r&sv=2022-11-02&sr=b&sig=2hTDyAWmzoGHXYqFAjTeQw0lps/YlXfjxSmSFhVTNPQ%3D\",\"height\":256,\"width\":256}],\"output_id\":\"8417f658-556d-41fc-bbb6-569f306e7b7e\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-24T05:34:48.062Z\",\"updated_at\":\"2023-10-24T05:35:05.407Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/SESSION_1698125688_6835080_preview.zip?se=2033-10-21T05%3A53%3A14Z&sp=r&sv=2023-01-03&sr=b&sig=33ccwDK7tuCWRe/guXGoVltRKpZN%2BD5CCkl/iwXNye0%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/mesh_preview.glb?se=2033-10-21T05%3A53%3A09Z&sp=r&sv=2023-01-03&sr=b&sig=6zwVwXbIPll69VTerFMBdAGuwstlpM9lie4%2Bh18wnvs%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/mesh_preview.usdz?se=2033-10-21T05%3A53%3A12Z&sp=r&sv=2023-01-03&sr=b&sig=6ehGcVa5j57pvgRTZP1nvLVqdLn928pzhEHmn2c/k%2BE%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698125688_6835080/SESSION_1698125688_6835080_preview.zip?se=2033-10-21T05%3A53%3A14Z&sp=r&sv=2023-01-03&sr=b&sig=33ccwDK7tuCWRe/guXGoVltRKpZN%2BD5CCkl/iwXNye0%3D/n\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1697779474_3533737/SESSION_1697779474_3533737.zip?se=2033-10-17T07%3A00%3A34Z&sp=r&sv=2023-01-03&sr=b&sig=OKodjReptSrFcEquNGySIlidltGAhx3JOsiULW8%2BmFY%3D\nalmost
-    there\nanime cat girl with green hair and yellow eyes\nTest\n{\n  \"created\":
-    1698252201,\n  \"data\": [\n    {\n      \"url\": \"https://oaidalleapiprodscus.blob.core.windows.net/private/org-mlj198jgyYaasMAUeyZ1ccfr/user-K6SUhYxHeuyVa5K9dTsB97WR/img-0Yb8Ro06CJPwJPreI6KY2Cxw.png?st=2023-10-25T15%3A43%3A21Z&se=2023-10-25T17%3A43%3A21Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/png&skoid=6aaadede-4fb3-4698-a8f6-684d7786b067&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-10-25T12%3A29%3A05Z&ske=2023-10-26T12%3A29%3A05Z&sks=b&skv=2021-08-06&sig=IaozRZQbRqGE4zMeGRsH7qL3WgV0xUbBGx/RALi2r9Y%3D\"\n   
-    }\n  ]\n}\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/v8Jdm0r0SXEj7Rbj3Mh0ng.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"653945b3d95a7cad8a9ebcb9\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1698252211_3719035\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/v8Jdm0r0SXEj7Rbj3Mh0ng.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/U1.png?se=2032-12-10T00%3A43%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=KPizBf1TKj6%2BISgnICnE8Z4y8yUzAVtW8A1u3AURpo8%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/U2.png?se=2032-12-10T00%3A43%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=vkqfAhwfw6hK8AxOb4VaLrEHqPU2eSLLpdtQShdRpU8%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/U3.png?se=2032-12-10T00%3A43%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=%2B%2BS5FbE25rljI5Lb9bG/Mr/Vo3ZTrBOynlsklnefJFw%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/U4.png?se=2032-12-10T00%3A43%3A40Z&sp=r&sv=2022-11-02&sr=b&sig=9mPCIIkqBLyio2TK4aVpzM5skpMwXvwkeuUbfzRrLiQ%3D\",\"height\":256,\"width\":256}],\"output_id\":\"3435d640-7c8c-410e-a4d2-4e3ee07e1418\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-25T16:43:31.431Z\",\"updated_at\":\"2023-10-25T16:43:42.311Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/SESSION_1698252211_3719035_preview.zip?se=2033-10-22T17%3A02%3A19Z&sp=r&sv=2023-01-03&sr=b&sig=Y4Z6QRcQb1ZE2JJMG9PHw/8%2BDI5Xg7tMWuCXJMeFIOk%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/mesh_preview.glb?se=2033-10-22T17%3A02%3A14Z&sp=r&sv=2023-01-03&sr=b&sig=0jJmI/HElSRXJAuFvVL54YFl4xw2RBJKReu6ATAVftQ%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/mesh_preview.usdz?se=2033-10-22T17%3A02%3A17Z&sp=r&sv=2023-01-03&sr=b&sig=ZKCltluctudUlcGtF3ZQsGvi93Aa2Hgv7i9ldScqzAY%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698252211_3719035/SESSION_1698252211_3719035_preview.zip?se=2033-10-22T17%3A02%3A19Z&sp=r&sv=2023-01-03&sr=b&sig=Y4Z6QRcQb1ZE2JJMG9PHw/8%2BDI5Xg7tMWuCXJMeFIOk%3D/n\nalmost
-    there\nImage uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/8Uyn2VVtoU8Rp2nRnk6ahQ.png\n\n{\"error\":\"\",\"message\":\"Created\",\"statusCode\":201,\"data\":{\"_id\":\"653ac4511e6caf0fce861243\",\"user_id\":\"64ea7f237b9108933c1c6d04\",\"session_code\":\"SESSION_1698350161_7607640\",\"image_url\":\"https://s3.amazonaws.com/texttomodelbucket/testFolder/Assets/ImagesFolder/8Uyn2VVtoU8Rp2nRnk6ahQ.png\",\"input_image\":\"\",\"discord_user_id\":\"\",\"user_name\":\"\",\"email\":\"lincolncruz77@gmail.com\",\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"polished_mesh_url_usdz\":\"\",\"polished_mesh_url_glb\":\"\",\"polished_mesh_url\":\"\",\"mesh_url_obj\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"mp4_url\":\"\",\"designer_mesh_url\":\"\",\"session_gif\":\"\",\"user_image\":\"\",\"percentage\":0,\"price\":0,\"status\":\"training_preview\",\"source\":\"external\",\"demo\":false,\"private\":true,\"debug\":false,\"random_poses\":true,\"inference\":[{\"image_name\":\"U1.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/U1.png?se=2032-12-11T03%3A56%3A10Z&sp=r&sv=2022-11-02&sr=b&sig=kMUXxdzfZYMruOTT38mJz39q3ESs3fsGFIHkR%2BD7cnE%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U2.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/U2.png?se=2032-12-11T03%3A56%3A10Z&sp=r&sv=2022-11-02&sr=b&sig=PPKGVt/s0kJ1qdft6j7B7vq2XUfvIO5jnzYXQr7vHmE%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U3.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/U3.png?se=2032-12-11T03%3A56%3A10Z&sp=r&sv=2022-11-02&sr=b&sig=in0ldgYnjpmZDro%2BWp1Lw%2BA0TeRXtaY2SKlSiyijJAY%3D\",\"height\":256,\"width\":256},{\"image_name\":\"U4.png\",\"image_url\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/U4.png?se=2032-12-11T03%3A56%3A10Z&sp=r&sv=2022-11-02&sr=b&sig=hYDk3MnAe2ftASGSeoLmX7%2BEFGbIBtVLQ56HJcm2On4%3D\",\"height\":256,\"width\":256}],\"output_id\":\"1bdde2df-ab0e-4b53-acc8-731c1b684fa5\",\"auto_gen_3d\":true,\"server_type\":\"fast\",\"model_version\":\"\",\"is_deleted\":false,\"created_at\":\"2023-10-26T19:56:01.522Z\",\"updated_at\":\"2023-10-26T19:56:12.104Z\"}}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"\",\"preview_mesh_url_glb\":\"\",\"preview_mesh_url_usdz\":\"\",\"status\":\"training_preview\"}]}\n\n{\"error\":\"\",\"message\":\"Retrieved\",\"statusCode\":200,\"data\":[{\"mesh_url_usdz\":\"\",\"mesh_url_glb\":\"\",\"mesh_url\":\"\",\"mesh_url_zip\":\"\",\"preview_mesh_url_zip\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/SESSION_1698350161_7607640_preview.zip?se=2033-10-23T20%3A12%3A06Z&sp=r&sv=2023-01-03&sr=b&sig=43eDUSK0KjZWkazeUF4IiKBaWSEeU9E1ww2fmMPwVuY%3D\",\"preview_mesh_url_glb\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/mesh_preview.glb?se=2033-10-23T20%3A12%3A02Z&sp=r&sv=2023-01-03&sr=b&sig=NnwHlqrRLIurJVAYjgchYx6VcCeC9gO366JfFb9OLyU%3D\",\"preview_mesh_url_usdz\":\"https://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/mesh_preview.usdz?se=2033-10-23T20%3A12%3A04Z&sp=r&sv=2023-01-03&sr=b&sig=bvCP4Yng2rhSQznlNg5jUdVMBMyfYXap5mkvpeEJg8o%3D\",\"status\":\"training_refine\"}]}\n\nhttps://imageto3d.blob.core.windows.net/data/inference_outputs/lincolncruz77@gmail.com/SESSION_1698350161_7607640/SESSION_1698350161_7607640_preview.zip?se=2033-10-23T20%3A12%3A06Z&sp=r&sv=2023-01-03&sr=b&sig=43eDUSK0KjZWkazeUF4IiKBaWSEeU9E1ww2fmMPwVuY%3D/n\nalmost
-    there\n"
---- !u!114 &21
+  m_code: "import secrets\r\nimport openai\r\nimport boto3\r\nimport urllib.request\r\nimport
+    requests\r\nimport json\r\nimport time\r\nimport zipfile\n\nmeshyKey = \"msy_04yhKpnkOmf23e79NskCIm0kp4BiwmG7iU0o\"\n\ntask_id
+    = \"018b8d84-8a5c-7405-80cb-fc979545c830\"\r\nheaders = {\r\n    \"Authorization\":
+    f\"Bearer {meshyKey}\"\r\n}\r\n\r\nresponse = requests.get(\r\n    f\"https://api.meshy.ai/v1/image-to-3d/{task_id}\",\r\n   
+    headers=headers,\r\n)\r\nresponse.raise_for_status()\r\nprint(response.json())"
+  m_outputContents: 'Image uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/-lJQKPtcCNxk6El4T_30uw.png
+
+
+    {''id'':
+    ''018b8d9c-af0b-7406-986d-17b64562675d'', ''name'': '''', ''status'': ''SUCCEEDED'',
+    ''created_at'': 1698887937812, ''progress'': 100, ''started_at'': 1698887938384,
+    ''finished_at'': 1698888025071, ''expires_at'': 1699147225071, ''task_error'':
+    None, ''model_url'': ''https://assets.meshy.ai/google-oauth2%7C103339223656677231441/tasks/018b8d9c-af0b-7406-986d-17b64562675d/output/model.glb?Expires=1699147225&Signature=AZXzqDfhMNHT5ms68XaPsal94uN1mhLGakmSEfV9vIzEEJnxOMYu2Lklm7k0J5DOI5NwRYS20Zztat1mNkWgyRHFU0LE9t-rdWBsexZadNIV0CquPP6MX-HISVOiNRLU6bfaNoegfXk43JzfnOTOZ6BuvbC2IPynNQnM~kPJABZwpzTqkFNzJKoWPjibdyH1AxVWvxpwZXGqSU1Uwa78T1FIGJTUHsU~2Y~lMJPVNRpe~Q8iSAakfdytAJutnCuq~XYmHnK-VoJRjKvUdt2j4sG~bcVoJgmITG6EwFGfQR1sJH95hwajdNN50V9-sgeYpI4w2k3CO58ngQqCCn9wVw__&Key-Pair-Id=KL5I0C8H7HX83'',
+    ''thumbnail_url'': ''https://assets.meshy.ai/google-oauth2%7C103339223656677231441/tasks/018b8d9c-af0b-7406-986d-17b64562675d/output/preview.png?Expires=1699147225&Signature=X9k9yF5QFgB1gzyNoDLPG6-0IG2lJcaCL0zowpDs3WuEktEc0MR5njxgPSvkaZoCW9XYhAV-8KfWW7FRb8hCFjyIsGy3Jz8ubESrn2aTKKxWRfzLZw6vrqgTAOtlDmdNHMjtYRFZ0Kd~n9f57QaYBuxiGA78hnOgzpOiXYRrFbUBLNSHVOra9Xoouk~fOP9ss9ncbRDY39Yd1zD38kG9JyOPLeatlFfa6SbW42DbGRRnRN1EJWWNUM5-Ydk-LnqGmI3pE41a9j2gi4rhskBoKTH7US2h9gZmyKe3cREcchwprYykizEawK76KO~ftudrQqa7srPjNdXIN-J0ncpnfQ__&Key-Pair-Id=KL5I0C8H7HX83'',
+    ''texture_urls'': [{''base_color'': ''https://assets.meshy.ai/google-oauth2%7C103339223656677231441/tasks/018b8d9c-af0b-7406-986d-17b64562675d/output/texture_0.png?Expires=1699147225&Signature=WpoyBhNYGFgsgeJm~Vzkb-ClwlrR6Uy1h~Le66t66WnaHoKZijx7bv5kwn6iGw3qtc1H2mbIgzPP0j36A0uru5-eeujw-JvX6pZHnj7ur4XD~o6F~m48EApBiPQaVLcH03uCAu4Hked9Tb8izldAoe5eI7e6zUl73etSlKjztQdXhndPjzNZ1lpFWk5PYjLE1ky3BuDZssQ9SzGiV4eRvDh6S6JBSEvdaCGCPanNMRLEcYjrYwiVRG~Y2lOteGMrOjpLlrpMPU8fNtVJ2kuqOsTLd2Nb6ILZL0BhOEyyG0nOXtzYxPPxzJ6lCZfheoF8MDY~tot-kn0XbHYXDv-GYw__&Key-Pair-Id=KL5I0C8H7HX83'',
+    ''metallic'': ''https://assets.meshy.ai/google-oauth2%7C103339223656677231441/tasks/018b8d9c-af0b-7406-986d-17b64562675d/output/texture_0_metallic.png?Expires=1699147225&Signature=XD5D2xr~YrM-Io3UXWQZRqVMvCqmhcQdCymtUcdNbMttGpYq68vctbqC03fFMb8ndOwTMvDErKvIyjkErzipHf06alRp7geiCgsUQCflF96HbjG3rsdK8Z8NfL4v5M6Z9kVBj~yiObkUSAhOmHU~gwUdMfEXDiJ1Kpj805AlLGISBz7TX3y5Pb-DVBLqJthWXTnZYpFyYcXQ-hWLNbZpxZAJzSJdLoclWRTFh~ByjuMAWmxBUAhN5b88uNvwgO4loCB8DDYCYi4Lwc2bn8hcqxPvbH6LmCtDegBZx-Hpy~HpOu15JzJGMGP9GjVS3gdxzH~um3jysbp46KTVvVlE3w__&Key-Pair-Id=KL5I0C8H7HX83'',
+    ''roughness'': ''https://assets.meshy.ai/google-oauth2%7C103339223656677231441/tasks/018b8d9c-af0b-7406-986d-17b64562675d/output/texture_0_roughness.png?Expires=1699147225&Signature=CbqANq0fT6CUflMIGROtlt~W~Z2S1lFAY~aXtToU7bAOfOSbzmIVw7QuGC1-XBeiA-mdz45v1zyc0ORaiL-D~NzlL8SD2xfUX88yTnaB3bgRcolGF1CjT9Ixcu8ZV-XVH~Bm~6FhnZjYpPIrrZo61g39mEoHDS1-Vtcz77W23ZIBryXfapeQ6Wbovo~biSgSCMJ3ufPp3jqaSNIKAf0Gz6u4RGOWQK7ljKbOS51EfinjouT-rfOxJM9zo2Frb4svm8ZJYfvRz7Xew9bLpTwD-bVxyHM4IYcKQIzCLIVU9oe01JyqopbBqi0DmavUYGdjuevzE~weXXi49cn5ty9qJg__&Key-Pair-Id=KL5I0C8H7HX83'',
+    ''normal'': ''https://assets.meshy.ai/google-oauth2%7C103339223656677231441/tasks/018b8d9c-af0b-7406-986d-17b64562675d/output/texture_0_normal.png?Expires=1699147225&Signature=Wa6dBAbF~fPW8MlaUqVDta7neFwCzBuL04KsX1yIpj0RFip~IdU1vky9PGrEqhxCPfAZ5CIxTqmemtjlW6sMj4Chzja11-Ak1Km2mcwkbWkCeusi7ICT8E6vvGwe0tCOQKUDN-wOCVBO03U24uNQRVYF86ZF46KD1AgjMYw4mR4VTCS2oztJO6QiCa~nNNqUxrp92t8KowHAxlVydPctOn8xJr5P3CcdZRCBod74HgH9DefkHp4Wc~iFDumwJp5Q4IbMS8yS4laCxmwxFCwLmczn6XwNzIyb54BKmgcZI-auKQHoW2ZJGiTVyW77LzzFBjqE02qYFTnuvL5gQvyrNw__&Key-Pair-Id=KL5I0C8H7HX83''}]}
+
+    Image
+    uploaded to S3: s3://texttomodelbucket/testFolder/Assets/ImagesFolder/T3cHMh6z7CC6Opl47qRmpA.png
+
+
+    almost
+    there
+
+'
+--- !u!114 &43
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -610,22 +1080,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ImagesFolder
+    - Assets/Models
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ImagesFolder
+  - Assets/Models
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\.Neumont\Third Year\Capstone\Capstone\Capstone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e2570000
-    m_LastClickedID: 22498
-    m_ExpandedIDs: 00000000d2570000d4570000d6570000d857000000ca9a3bffffff7f
+    m_SelectedIDs: 28580000
+    m_LastClickedID: 22568
+    m_ExpandedIDs: 00000000325800003458000036580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,7 +1111,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 35}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -653,7 +1123,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d2570000d4570000d6570000d8570000
+    m_ExpandedIDs: 00000000325800003458000036580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -678,9 +1148,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 42590000
+    m_LastClickedInstanceID: 22850
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000305b000012590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -697,7 +1167,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 13}
+      m_ClientGUIView: {fileID: 35}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -709,7 +1179,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &22
+--- !u!114 &44
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -751,7 +1221,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &23
+--- !u!114 &45
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -785,7 +1255,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 36fbffff
+      m_ExpandedIDs: 2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -801,7 +1271,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 12}
+        m_ClientGUIView: {fileID: 34}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -809,7 +1279,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &24
+--- !u!114 &46
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1068,9 +1538,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.0385873, y: 0.10615945, z: 2.8749154}
+    m_Target: {x: -4.3218718, y: 11.339053, z: 16.669296}
     speed: 2
-    m_Value: {x: -3.0385873, y: 0.10615945, z: 2.8749154}
+    m_Value: {x: -6.0235844, y: 0.06466499, z: 3.0315454}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1117,13 +1587,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.03166832, y: 0.96830636, z: -0.1711158, w: -0.1792336}
+    m_Target: {x: -0.12522043, y: 0.87344986, z: -0.30594236, w: -0.35753736}
     speed: 2
-    m_Value: {x: -0.03166792, y: 0.96829414, z: -0.17111364, w: -0.17923133}
+    m_Value: {x: 0.10546598, y: 0.8635816, z: -0.20256935, w: 0.4495568}
   m_Size:
-    m_Target: 3.426065
+    m_Target: 2.0886059
     speed: 2
-    m_Value: 3.426065
+    m_Value: 2.0886059
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1148,7 +1618,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &25
+--- !u!114 &47
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1241,7 +1711,7 @@ MonoBehaviour:
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &26
+--- !u!114 &48
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
