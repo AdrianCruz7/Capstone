@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="height: 566px;">
+        <ui:Label text="Insert your prompt into the field below" display-tooltip-when-elided="true" name="labelPrompt" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; top: auto; bottom: auto; padding-bottom: 10px; padding-top: 10px;" />
+        <ui:TextField picking-mode="Ignore" value="filler text" name="promptField" style="flex-direction: column; white-space: normal; width: 464px; align-items: stretch; flex-wrap: wrap; justify-content: flex-start; height: 24px; position: relative; -unity-font-style: bold; padding-right: 20px; padding-left: 20px;" />
+        <ui:Button text="Create Model" display-tooltip-when-elided="true" name="promptButton" />
+        <ui:Label display-tooltip-when-elided="true" style="height: 470px; width: 470px;" />
+    </ui:VisualElement>
+</ui:UXML>

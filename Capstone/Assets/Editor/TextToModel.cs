@@ -33,23 +33,53 @@ public class TextToModel : EditorWindow
     Texture2D image;
     bool firstTime = true;
 
-    VisualElement container;
+    VisualTreeAsset uiAsset;
+    VisualElement ui;
+
+    //used for functions of buttons
+    Action Action1;
 
     [MenuItem("Capstone/Text To 3D Asset")]
     public static void ShowExample()
     {
+
         TextToModel wnd = GetWindow<TextToModel>("TextToModel");
-        wnd.maxSize = new Vector2(470f, 1000f);
+
+        //wnd.rootVisualElement.Add(ui);
+
+        /*wnd.maxSize = new Vector2(470f, 1000f);
         wnd.minSize = wnd.maxSize;
         var position = wnd.position;
 
-        position.center = new Rect(215f, 215f, Screen.currentResolution.width / 2, Screen.currentResolution.height / 2).center;
-        //wnd.position = position;
+        position.center = new Rect(215f, 215f, Screen.currentResolution.width / 2, Screen.currentResolution.height / 2).center;*/
 
         Debug.Log("Happens second");
     }
 
     private void OnEnable()
+    {
+        Action1 += testfunction3;
+        SetUpUI();
+    }
+
+    public void SetUpUI()
+    {
+        uiAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/UXMLTest/trial.uxml");
+        ui = uiAsset.Instantiate();
+
+        rootVisualElement.Add(ui);
+
+        var buttontest = ui.Q<Button>("promptButton");
+        buttontest.RegisterCallback<MouseUpEvent>((evt) => Action1());
+    }
+
+    void testfunction3()
+    {
+        var field = ui.Q<TextField>("promptField");
+        Debug.Log(field.text);
+    }
+
+    /*private void OnEnable()
     {
         //Title and main container
         container = new VisualElement();
@@ -58,9 +88,9 @@ public class TextToModel : EditorWindow
         //Loading style sheet
         StyleSheet styleSheet = (StyleSheet)EditorGUIUtility.Load("TextToModelStyle.uss");
         rootVisualElement.styleSheets.Add(styleSheet);
-    }
+    }*/
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
         //can't go below 1 for mesh instances field
         if (meshInstances < 1)
@@ -69,7 +99,7 @@ public class TextToModel : EditorWindow
         }
 
         //placeholder
-        if(firstTime)
+        if (firstTime)
         {
             image = EditorGUIUtility.Load("Assets/ImagesFolder/placeholder.png") as Texture2D;
             firstTime = false;
@@ -93,7 +123,7 @@ public class TextToModel : EditorWindow
         //create object button
         if (GUILayout.Button("Create Object"))
         {
-            CreatePrompt();
+            //CreatePrompt();
             //MeshyCreatePrompt();
             //UpdateImage();
             //PlaceAsset();
@@ -118,19 +148,19 @@ public class TextToModel : EditorWindow
         {
             //number of meshes
             meshInstances = EditorGUILayout.IntField("Number of objects to create", meshInstances);
-            
+
             //radius where the meshes will be spawned in
             radius = EditorGUILayout.FloatField("Spawning Radius", radius);
         }
 
         GUILayout.Label("");
 
-        if(GUILayout.Button("Other Settings"))
+        if (GUILayout.Button("Other Settings"))
         {
             WindowSettings();
         }
         EditorGUILayout.EndVertical();
-    }
+    }*/
 
     //test function
     public void MeshyCreatePrompt()
@@ -290,7 +320,7 @@ public class TextToModel : EditorWindow
     }
 
     //Test and Debug functions from this point
-    public void TestFunction1()
+    /*public void TestFunction1()
     {
         PythonRunner.RunFile("Assets/PythonScripts/NewTestScript.py");
         string text = File.ReadAllText("Assets/Test/AssetFilePath.json");
@@ -315,11 +345,11 @@ public class TextToModel : EditorWindow
     public void TestFunction2()
     {
         //this.StartCoroutine(Confirm());
-    }
+    }*/
 
-    
 
-    /*public void CreateGUI()
+
+    /*private void CreateGUI()
     {
         Debug.Log("Happens first");
         Debug.Log(refImage + " is the reference image and firstTime is set to: " + firstTime);

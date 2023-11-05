@@ -379,7 +379,7 @@ MonoBehaviour:
     width: 2048
     height: 1196.8
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Scene
   m_RootView: {fileID: 36}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 57
+  controlID: 27
 --- !u!114 &33
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -773,8 +773,8 @@ MonoBehaviour:
     y: 0
     width: 468.80005
     height: 1146.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 44}
   m_Panes:
   - {fileID: 44}
@@ -799,8 +799,8 @@ MonoBehaviour:
     y: 0
     width: 343.2
     height: 572.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 45}
   m_Panes:
   - {fileID: 45}
@@ -825,8 +825,8 @@ MonoBehaviour:
     y: 572.8
     width: 1579.2
     height: 574.00006
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 48}
   m_Panes:
   - {fileID: 43}
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 58
+  controlID: 28
 --- !u!114 &40
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -954,7 +954,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 59
+  controlID: 29
 --- !u!114 &41
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1080,22 +1080,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Models
+    - Assets/UXMLTest
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models
+  - Assets/UXMLTest
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\.Neumont\Third Year\Capstone\Capstone\Capstone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 28580000
-    m_LastClickedID: 22568
-    m_ExpandedIDs: 00000000325800003458000036580000
+    scrollPos: {x: 0, y: 74.99994}
+    m_SelectedIDs: bc590000
+    m_LastClickedID: 22972
+    m_ExpandedIDs: 000000002a5800002c5800002e58000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1123,7 +1123,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000325800003458000036580000
+    m_ExpandedIDs: 000000002a5800002c5800002e580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1148,9 +1148,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 42590000
-    m_LastClickedInstanceID: 22850
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: b8590000
+    m_LastClickedInstanceID: 22968
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000305b000012590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2efbffff
+      m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1540,7 +1540,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -4.3218718, y: 11.339053, z: 16.669296}
     speed: 2
-    m_Value: {x: -6.0235844, y: 0.06466499, z: 3.0315454}
+    m_Value: {x: -4.3218718, y: 11.339053, z: 16.669296}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1589,7 +1589,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.12522043, y: 0.87344986, z: -0.30594236, w: -0.35753736}
     speed: 2
-    m_Value: {x: 0.10546598, y: 0.8635816, z: -0.20256935, w: 0.4495568}
+    m_Value: {x: -0.12521866, y: 0.87343746, z: -0.305938, w: -0.3575323}
   m_Size:
     m_Target: 2.0886059
     speed: 2
