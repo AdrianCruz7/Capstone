@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement style="height: auto; width: auto;">
+        <ui:Label text="Insert your prompt into the field below" display-tooltip-when-elided="true" name="labelPrompt" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; top: auto; bottom: auto; padding-bottom: 10px; padding-top: 10px;" />
+        <ui:TextField picking-mode="Ignore" name="promptField" style="flex-direction: column; white-space: normal; width: 464px; align-items: stretch; flex-wrap: wrap; justify-content: flex-start; height: 24px; position: relative; -unity-font-style: bold; padding-right: 20px; padding-left: 20px;" />
+        <ui:Button text="Create Model" display-tooltip-when-elided="true" name="promptButton" style="padding-bottom: 4px; margin-bottom: 10px; margin-top: 10px;" />
+        <ui:Label display-tooltip-when-elided="true" name="labelImage" style="height: 470px; width: 470px;" />
+    </ui:VisualElement>
+    <ui:Foldout text="Object Generation Settings" value="true" name="objectFoldout" style="-unity-font-style: bold; height: auto;">
+        <uie:ObjectField label="Object Transform" type="UnityEngine.Transform, UnityEngine.CoreModule" name="transformField" style="-unity-font-style: normal;" />
+        <ui:FloatField label="Object Scale" value="1" name="scaleField" style="-unity-font-style: normal;" />
+        <ui:Foldout text="Multiple Objects Settings" value="true" name="multipleFoldout" style="-unity-font-style: normal;">
+            <ui:IntegerField label="# of Meshes" value="42" name="meshNumbers" />
+            <ui:FloatField label="Spawn Radius" value="42.2" />
+        </ui:Foldout>
+    </ui:Foldout>
+</ui:UXML>
