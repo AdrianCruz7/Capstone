@@ -15,6 +15,8 @@ using Unity.EditorCoroutines.Editor;
 using System.Collections;
 using NUnit.Framework.Internal;
 using Codice.Client.Common;
+using GLTFast.Schema;
+using Toggle = UnityEngine.UIElements.Toggle;
 
 public class TextToModel : EditorWindow
 {
@@ -36,48 +38,76 @@ public class TextToModel : EditorWindow
     float scale = 1.0f;
     FloatField uiScale;
     
-    float radius = 5.0f;
+    float radius = 1.0f;
     FloatField uiRadius;
 
     string prompt;
     
     Texture2D image;
-    
-    //bool firstTime = true;
 
+    //visual elements
     VisualTreeAsset uiAsset;
     VisualElement ui;
 
     //used for functions of buttons
     Action Action1;
+    Action Action2;
+
+    bool testToggle = false;
+    Toggle uiTestToggle;
+
 
     [MenuItem("Capstone/Text To 3D Asset")]
     public static void ShowExample()
     {
-
         TextToModel wnd = GetWindow<TextToModel>("TextToModel");
-
-        //wnd.rootVisualElement.Add(ui);
-
-        /*wnd.maxSize = new Vector2(470f, 1000f);
-        wnd.minSize = wnd.maxSize;
-        var position = wnd.position;
-
-        position.center = new Rect(215f, 215f, Screen.currentResolution.width / 2, Screen.currentResolution.height / 2).center;*/
 
         Debug.Log("Happens second");
     }
 
     private void OnEnable()
     {
-        Action1 += testfunction3;
+        Action1 += Confirmation;
+        Action2 += uitestfunction1;
         SetUpUI();
     }
 
-    //debug purposes
-    private void Update()
+    private void OnGUI()
     {
-        
+        uiScale.RegisterValueChangedCallback(evt => { uiScale.value = Mathf.Clamp(uiScale.value, 1, 100); });
+        uiMeshInstances.RegisterValueChangedCallback(evt => { uiMeshInstances.value = Mathf.Clamp(uiMeshInstances.value, 1, 100); });
+        uiRadius.RegisterValueChangedCallback(evt => { uiRadius.value =  Mathf.Clamp(uiRadius.value, 1, 100); });
+    }
+
+    public void uitestfunction1()
+    {
+        testToggle = uiTestToggle.value;
+
+        if(testToggle)
+        {
+            var a = ui.Q<VisualElement>("grow0element");
+            a.SetEnabled(true);
+        }
+        else
+        {
+            var b = ui.Q<VisualElement>("grow0element");
+            b.SetEnabled(false);
+        }
+        /*if(testToggle)
+        {
+            VisualElement ui = new VisualElement();
+            ui.name = "labelcontainer";
+            ui.Add(new Label("sef"));
+            ui.Add(new Label("aefef"));
+            ui.Add(new Label("saaf"));
+            uiTestToggle.Add(ui);
+        }
+        else
+        {
+            var removal = uiTestToggle.Q<VisualElement>("labelcontainer");
+            removal.SetEnabled(false);
+            uiTestToggle.Remove(removal);
+        }*/
     }
 
     public void SetUpUI()
@@ -89,11 +119,20 @@ public class TextToModel : EditorWindow
         labelImage = ui.Q<Label>("labelImage");
         labelImage.style.backgroundImage = EditorGUIUtility.Load("Assets/ImagesFolder/placeholder.png") as Texture2D;
 
+        uiScale = ui.Q<FloatField>("scaleField");
+        uiMeshInstances = ui.Q<IntegerField>("meshNumbers");
+        uiMultipleMeshes = ui.Q<Foldout>("multipleFoldout");
+        uiRadius = ui.Q<FloatField>("radiusField");
+
+        uiTestToggle = ui.Q<Toggle>("testToggle");
+        uiTestToggle.RegisterCallback<MouseUpEvent>((evt) => Action2());
+
+
         var buttontest = ui.Q<Button>("promptButton");
         buttontest.RegisterCallback<MouseUpEvent>((evt) => Action1());
     }
 
-    void testfunction3()
+    void AssignValues()
     {
         prompt = ui.Q<TextField>("promptField").value;
         //Debug.Log(field.text);   
@@ -101,14 +140,16 @@ public class TextToModel : EditorWindow
         testGO = (Transform)ui.Q<ObjectField>("transformField").value;
         Debug.Log(testGO);
 
-        scale = ui.Q<FloatField>("scaleField").value;
+        scale = uiScale.value;
 
-        multipleMeshes = ui.Q<Foldout>("multipleFoldout").value;
-
-        meshInstances = ui.Q<IntegerField>("meshNumbers").value;
+        multipleMeshes = uiMultipleMeshes.value;
+        if(multipleMeshes == true)
+        {
+            meshInstances = uiMeshInstances.value;
+            radius = uiRadius.value;
+        }
 
         MeshyCreatePrompt();
-        //PlaceAsset();
     }
 
     /*private void OnEnable()
@@ -194,7 +235,6 @@ public class TextToModel : EditorWindow
         EditorGUILayout.EndVertical();
     }*/
 
-    //test function
     public void MeshyCreatePrompt()
     {
         //Makes prompt class
@@ -209,7 +249,7 @@ public class TextToModel : EditorWindow
         //Runs the python script
         PythonRunner.RunFile("Assets/PythonScripts/NewImageToModel.py");
 
-        Debug.Log("End?");
+        Debug.Log(meshInstances);
 
         PlaceAsset();
     }
@@ -245,69 +285,46 @@ public class TextToModel : EditorWindow
         AssetFilePath filepath = new AssetFilePath();
         JsonUtility.FromJsonOverwrite(text, filepath);
 
-        //Debug
-        //Debug.Log(filepath.textFilePath);
+        Debug.Log(meshInstances);
 
         //loads the mesh
         var test = (GameObject)EditorGUIUtility.Load(filepath.textFilePath);
-        
 
-        /*if(multipleMeshes)
+        //if GO transform is null it makes on by default
+        if (testGO == null)
         {
-            for(int i = 0; i <= meshInstances; i++)
-            {
-                Vector2 spawnField = UnityEngine.Random.insideUnitCircle * radius;
-                Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
-                position.x += testGO.position.x;
-                position.y += testGO.position.y;
-                position.z += testGO.position.z;
+            GameObject go = new GameObject();
+            testGO = go.transform;
+        }    
 
-                var anInstance = Instantiate(test);
-                anInstance.transform.position = position;
-                anInstance.transform.localScale = new Vector3(scale, scale, scale);
-            }
-        }
-        else
+        if(meshInstances == 1)
         {
             //instantiates the object in the world
             var instance = Instantiate(test);
+            instance.transform.localScale = new Vector3(scale, 10, scale);
 
-            //checks if GO transform is null
             if (testGO != null)
             {
                 //sets the object transform where the gameobject is located
                 instance.transform.position = testGO.transform.position;
             }
-
-            //scales up the object transform to scale value
-            instance.transform.localScale = new Vector3(scale, scale, scale);
-        }*/
-
-        //instantiates the object in the world
-        var instance = Instantiate(test);
-
-        //checks if GO transform is null
-        if (testGO != null)
-        {
-            //sets the object transform where the gameobject is located
-            instance.transform.position = testGO.transform.position;
         }
-
-        instance.transform.localScale = new Vector3(scale, scale, scale);
-
-        if (multipleMeshes)
+        else
         {
-            for (int i = 0; i <= meshInstances; i++)
+            if (multipleMeshes)
             {
-                Vector2 spawnField = UnityEngine.Random.insideUnitCircle * radius;
-                Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
-                position.x += testGO.position.x;
-                position.y += testGO.position.y;
-                position.z += testGO.position.z;
+                for (int i = 0; i < meshInstances; i++)
+                {
+                    Vector2 spawnField = UnityEngine.Random.insideUnitCircle * radius;
+                    Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
+                    position.x += testGO.position.x;
+                    position.y += testGO.position.y;
+                    position.z += testGO.position.z;
 
-                var anInstance = Instantiate(test);
-                anInstance.transform.position = position;
-                anInstance.transform.localScale = new Vector3(scale, scale, scale);
+                    var anInstance = Instantiate(test);
+                    anInstance.transform.position = position;
+                    anInstance.transform.localScale = new Vector3(scale, scale, scale);
+                }
             }
         }
 
@@ -334,46 +351,24 @@ public class TextToModel : EditorWindow
 
     public void Confirmation()
     {
-        bool confirmation = EditorUtility.DisplayDialog("Confirmation", "Model generation can take several minutes and might even fail depending on the prompt given. Do you wish to proceed?", "Yes", "No");
+        bool confirmation = EditorUtility.DisplayDialog("Confirmation", "Model generation can take several minutes and can even fail depending on the prompt given. Do you wish to proceed?", "Yes", "No");
 
         if (confirmation)
         {
             Debug.Log("Confirmation is a yes");
-            //CreatePrompt();
+            AssignValues();
         }
         else
         {
             Debug.Log("Confirmation is a no");
-            //this.Close();
         }
     }
 
-    //change into api key window for later
     public void WindowSettings()
     {
         var windowType = typeof(TextToModel);
         TTMSettings window = GetWindow<TTMSettings>(windowType);
         window.Show();
-    }
-
-    public void Styling(out GUIStyle labelStyle, out GUIStyle imageStyle)
-    {
-        labelStyle = new GUIStyle()
-        {
-            alignment = TextAnchor.MiddleCenter,
-            fontSize = 20,
-            fontStyle = FontStyle.Bold
-        };
-
-        labelStyle.normal.textColor = Color.white;
-        labelStyle.padding.top = 10;
-        labelStyle.padding.bottom = 10;
-
-        imageStyle = new GUIStyle()
-        {
-            alignment = TextAnchor.MiddleCenter,
-            fixedHeight = 463
-        };
     }
 
     //Test and Debug functions from this point
