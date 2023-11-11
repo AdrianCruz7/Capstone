@@ -55,7 +55,7 @@ openai.api_key = dataKey1.get('key')
 createdImage = openai.Image.create(
     prompt=test1,
     n=1,
-    size="256x256"
+    size="512x512"
 )
 
 #grabs url from OpenAI
