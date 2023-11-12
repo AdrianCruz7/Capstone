@@ -9,24 +9,31 @@
     </ui:VisualElement>
     <ui:Foldout text="Object Generation Settings" value="true" name="objectFoldout" style="-unity-font-style: bold; height: auto;">
         <ui:DropdownField label="Generation Type" index="2" choices="Single Object, Multiple Objects" name="choiceField" style="-unity-font-style: normal;" />
-        <ui:Foldout text="Single Object Settings" value="true" name="singleSettings">
+        <ui:Foldout text="Single Object Settings" value="true" name="singleSettings" style="display: none;">
+            <ui:Toggle label="Child Object" name="childSingleObject" class="layerOne" style="-unity-font-style: normal;" />
             <ui:Toggle label="Use Object in Scene" name="optionalObject" class="layerOne" style="-unity-font-style: normal;" />
             <uie:ObjectField label="Object Transform" type="UnityEngine.Transform, UnityEngine.CoreModule" name="transformField" class="layerOne" style="-unity-font-style: normal;" />
             <ui:Vector3Field label="Object Position" name="positionField" class="test layerOne" style="-unity-font-style: normal; visibility: visible; display: flex;" />
             <ui:Vector3Field label="Object Rotation" name="rotationField" class="test layerOne" style="-unity-font-style: normal;" />
             <ui:Vector3Field label="Object Scale" name="scaleField" x="1" y="1" z="1" class="test layerOne" style="-unity-font-style: normal;" />
         </ui:Foldout>
-        <ui:Foldout text="Multiple Objects Settings" value="true" name="multipleSettings" style="-unity-font-style: bold;">
+        <ui:Foldout text="Multiple Objects Settings" value="true" name="multipleSettings" style="-unity-font-style: bold; display: none;">
             <ui:DropdownField label="Placement Method" index="-1" choices="Object Tag,Spawn Radius" name="placementMethod" class="test layerOne" style="-unity-font-style: normal; display: flex;" />
-            <ui:TextField picking-mode="Ignore" label="Tag" max-length="1000" name="tagField" class="test layerOne" style="-unity-font-style: normal;" />
-            <ui:IntegerField label="# of Meshes" value="1" name="meshNumbers" class="test layerOne" style="-unity-font-style: normal;" />
-            <ui:Toggle label="Object for Spawn Point" name="spToggle" class="layerOne" style="-unity-font-style: normal;" />
-            <uie:ObjectField label="Spawn Radius Point" type="UnityEngine.Transform, UnityEngine.CoreModule" name="spObject" class="layerOne" style="-unity-font-style: normal;" />
-            <ui:Vector3Field label="Spawn Radius Point" name="spVector" class="test layerOne" style="-unity-font-style: normal;" />
-            <ui:FloatField label="Spawn Radius" value="1" name="radiusField" class="test layerOne" style="-unity-font-style: normal;" />
+            <ui:Toggle label="Children Objects" name="childrenMultipleOption" class="layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:TextField picking-mode="Ignore" label="Tag" max-length="1000" name="tagField" class="test layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:IntegerField label="# of Meshes" value="1" name="meshNumbers" class="test layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:Toggle label="Object for Spawn Point" name="spToggle" class="layerOne" style="-unity-font-style: normal; display: none;" />
+            <uie:ObjectField label="Spawn Radius Point" type="UnityEngine.Transform, UnityEngine.CoreModule" name="spObject" class="layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:Vector3Field label="Spawn Radius Point" name="spVector" class="test layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:FloatField label="Spawn Radius" value="1" name="radiusField" class="test layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:Foldout text="Objects Rotation and Scale Settings" name="objectRotationAndScale" style="display: none;">
+                <ui:Vector3Field label="Rotation Min Values" name="rotationMinValues" class="layerTwo" style="-unity-font-style: normal;" />
+                <ui:Vector3Field label="Rotation Max Values" name="rotationMaxValues" class="layerTwo" style="-unity-font-style: normal;" />
+                <ui:Vector3Field label="Scale Min Values" name="scaleMinValues" x="1" y="1" z="1" class="layerTwo" style="-unity-font-style: normal;" />
+                <ui:Vector3Field label="Scale Max Values" name="scaleMaxValues" x="1" y="1" z="1" class="layerTwo" style="-unity-font-style: normal;" />
+            </ui:Foldout>
         </ui:Foldout>
     </ui:Foldout>
-    <ui:Toggle label="Toggle" value="false" name="testToggle" style="display: none;" />
     <ui:VisualElement name="grow0element" style="flex-grow: 0; display: none;">
         <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
         <ui:Toggle label="Toggle" />

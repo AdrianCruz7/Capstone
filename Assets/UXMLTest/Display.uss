@@ -1,3 +1,12 @@
 .layerOne > Label {
     min-width: 160px;
 }
+
+.layerTwo > Label {
+    min-width: 180px;
+}
+
+.min > Label{
+    flex-shrink: 1;
+    min-width: 30px;
+}

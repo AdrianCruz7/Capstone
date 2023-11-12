@@ -7,5 +7,5 @@ public class MenuItem_CreateModel_Class
    public static void CreateModel()
    {
        PythonRunner.RunFile("Assets/PythonScripts/CreateModel.py");
-       }
+   }
 };

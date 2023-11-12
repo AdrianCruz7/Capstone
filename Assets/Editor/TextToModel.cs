@@ -20,12 +20,6 @@ using Toggle = UnityEngine.UIElements.Toggle;
 
 public class TextToModel : EditorWindow
 {
-    /*TextField tf;
-    Texture2D refImage;
-    bool firstTime = true;
-    Image imageHold;
-    VisualElement imageContainer;*/
-
     //choice
     DropdownField uiChoices;
     string userChoice = "";
@@ -33,23 +27,24 @@ public class TextToModel : EditorWindow
     //object transformation settings
     Foldout uiSingleSettings;
 
+    Toggle uiSingleChildToggle;
+    bool singleChildToggle;
+
     Toggle uiOptionalObj;
     bool optionalObj;
 
     ObjectField uiTestGO;
     Transform testGO;
 
-    //float defaultScale = 1.0f;
     Vector3Field uiScale;
     Vector3Field uiPosition;
     Vector3Field uiRotation;
 
-    //this might be replaced
-    bool multipleMeshes = false;
-    Foldout uiMultipleMeshes;
-
     //multiple mesh generation settings
     Foldout uiMultipleSettings;
+
+    Toggle uiMultipleChildrenToggle;
+    bool multipleChildrenToggle;
 
     DropdownField uiPlacementMethod;
     string placement;
@@ -68,10 +63,20 @@ public class TextToModel : EditorWindow
     Transform spawnPointGO;
 
     Vector3Field uiSpawnPosition;
-    Vector3 spawnPosition;
     
     FloatField uiRadius;
     float radius = 1.0f;
+
+    Foldout uiRotationAndScale;
+
+    Vector3Field uiRotationMin;
+    Vector3 rotationMin;
+    Vector3Field uiRotationMax;
+    Vector3 rotationMax;
+    Vector3Field uiScaleMin;
+    Vector3 scaleMin;
+    Vector3Field uiScaleMax;
+    Vector3 scaleMax;
 
     //miscellaneous
     string prompt;
@@ -79,10 +84,11 @@ public class TextToModel : EditorWindow
     Texture2D image;
 
     int operation = 0;
+    //remove redundant numbers later
     //1 = Single generation with an object used for placement
     //2 = Single generation with user manually inputing the transform
     //3 = Multiple generation using tags from objects in scene
-    //4 = Mulitple generation
+    //4 = Mulitple generation 
     //5 = Multiple generation
 
     //visual elements
@@ -107,20 +113,20 @@ public class TextToModel : EditorWindow
     public static void ShowExample()
     {
         TextToModel wnd = GetWindow<TextToModel>("TextToModel");
-        //Debug.Log("Happens second");
     }
 
     private void OnEnable()
     {
-        Settings += WindowSettings;
+        //Settings += WindowSettings;
+        Settings += testfun;
         Action1 += Confirmation;
-        Action2 += uitestfunction1;
+        //Action2 += uitestfunction1;
         Action3 += UIObjectInSceneDisplay;
         Action4 += UIOptionsDisplay;
         Action5 += UIPlacementMethodDisplay;
         Action6 += UIToggleGOSpawnPoint;
         SetUpUI();
-        uitestfunction1();
+        //uitestfunction1();
         UIObjectInSceneDisplay();
     }
 
@@ -132,6 +138,34 @@ public class TextToModel : EditorWindow
         uiMeshInstances.RegisterValueChangedCallback(evt => { uiMeshInstances.value = Mathf.Clamp(uiMeshInstances.value, 1, 100); });
         uiTagField.RegisterValueChangedCallback(evt => { tag =  uiTagField.value; });
         uiRadius.RegisterValueChangedCallback(evt => { uiRadius.value =  Mathf.Clamp(uiRadius.value, 1, 100); });
+    }
+
+    public void testfun()
+    {
+        Debug.Log(UnityEngine.Random.Range(1, 2));
+
+        /*testGO = (Transform)uiTestGO.value;
+
+        Debug.Log(testGO.rotation);
+        Debug.Log(testGO.rotation.x);
+        Debug.Log(testGO.rotation.y);
+        Debug.Log(testGO.rotation.z);*/
+
+        /*Debug.Log("R Min X " + uiRotationMin.value.x);
+        Debug.Log("R Min Y " + uiRotationMin.value.y);
+        Debug.Log("R Min Z " + uiRotationMin.value.z);
+
+        Debug.Log("R Max X " + uiRotationMax.value.x);
+        Debug.Log("R Max Y " + uiRotationMax.value.y);
+        Debug.Log("R Max Z " + uiRotationMax.value.z);
+
+        Debug.Log("S Min X " + uiScaleMin.value.x);
+        Debug.Log("S Min Y " + uiScaleMin.value.y);
+        Debug.Log("S Min Z " + uiScaleMin.value.z);
+
+        Debug.Log("S Max X " + uiScaleMax.value.x);
+        Debug.Log("S Max Y " + uiScaleMax.value.y);
+        Debug.Log("S Max Z " + uiScaleMax.value.z);*/
     }
 
     //displays based on choice of single or multiple generation
@@ -201,44 +235,31 @@ public class TextToModel : EditorWindow
         switch (uiPlacementMethod.value)
         {
             case "Object Tag":
+                uiMultipleChildrenToggle.style.display = StyleKeyword.Auto;
                 uiTagField.style.display = StyleKeyword.Auto;
                 uiMeshInstances.style.display = StyleKeyword.None;
                 uiToggleSpawnPoint.style.display = StyleKeyword.None;
                 uiSpawnPointGO.style.display = StyleKeyword.None;
                 uiSpawnPosition.style.display = StyleKeyword.None;
                 uiRadius.style.display = StyleKeyword.None;
+                uiRotationAndScale.style.display = StyleKeyword.None;
                 placement = uiPlacementMethod.value;
                 break;
 
             case "Spawn Radius":
+                uiMultipleChildrenToggle.style.display = StyleKeyword.Auto;
                 uiTagField.style.display = StyleKeyword.None;
                 uiMeshInstances.style.display = StyleKeyword.Auto;
                 uiToggleSpawnPoint.style.display = StyleKeyword.Auto;
                 UIToggleGOSpawnPoint();
                 uiRadius.style.display = StyleKeyword.Auto;
+                uiRotationAndScale.style.display = StyleKeyword.Auto;
                 placement = uiPlacementMethod.value;
                 break;
 
             default:
                 Debug.Log("somethings wrong");
                 break;
-        }
-
-    }
-
-    public void uitestfunction1()
-    {
-        testToggle = uiTestToggle.value;
-
-        if(testToggle)
-        {
-            var a = ui.Q<VisualElement>("grow0element");
-            a.SetEnabled(true);
-        }
-        else
-        {
-            var b = ui.Q<VisualElement>("grow0element");
-            b.SetEnabled(false);
         }
     }
 
@@ -260,7 +281,10 @@ public class TextToModel : EditorWindow
 
         //single settings
         uiSingleSettings = ui.Q<Foldout>("singleSettings");
-        uiSingleSettings.style.display = StyleKeyword.None;
+        //uiSingleSettings.style.display = StyleKeyword.None;
+
+        //optional turn object into child
+        uiSingleChildToggle = ui.Q<Toggle>("childSingleObject");
 
         //optional object
         uiOptionalObj = ui.Q<Toggle>("optionalObject");
@@ -273,25 +297,31 @@ public class TextToModel : EditorWindow
 
         //multiple settings
         uiMultipleSettings = ui.Q<Foldout>("multipleSettings");
-        uiMultipleSettings.style.display = StyleKeyword.None;
+        //uiMultipleSettings.style.display = StyleKeyword.None;
+
+        //optional turn objects into children
+        uiMultipleChildrenToggle = ui.Q<Toggle>("childrenMultipleOption");
+        //uiMultipleChildrenToggle.style.display = StyleKeyword.None;
 
         uiPlacementMethod = ui.Q<DropdownField>("placementMethod");
         uiTagField = ui.Q<TextField>("tagField");
-        uiTagField.style.display = StyleKeyword.None;
+        //uiTagField.style.display = StyleKeyword.None;
         uiMeshInstances = ui.Q<IntegerField>("meshNumbers");
-        uiMeshInstances.style.display = StyleKeyword.None;
+        //uiMeshInstances.style.display = StyleKeyword.None;
         uiToggleSpawnPoint = ui.Q<Toggle>("spToggle");
-        uiToggleSpawnPoint.style.display = StyleKeyword.None;
+        //uiToggleSpawnPoint.style.display = StyleKeyword.None;
         uiSpawnPointGO = ui.Q<ObjectField>("spObject");
-        uiSpawnPointGO.style.display = StyleKeyword.None;
+        //uiSpawnPointGO.style.display = StyleKeyword.None;
         uiSpawnPosition = ui.Q<Vector3Field>("spVector");
-        uiSpawnPosition.style.display = StyleKeyword.None;
+        //uiSpawnPosition.style.display = StyleKeyword.None;
         uiRadius = ui.Q<FloatField>("radiusField");
-        uiRadius.style.display = StyleKeyword.None;
+        //uiRadius.style.display = StyleKeyword.None;
 
-        //debugging
-        uiTestToggle = ui.Q<Toggle>("testToggle");
-        uiTestToggle.RegisterCallback<MouseUpEvent>((evt) => Action2());
+        uiRotationMin = ui.Q<Vector3Field>("rotationMinValues");
+        uiRotationMax = ui.Q<Vector3Field>("rotationMaxValues");
+        uiScaleMin = ui.Q<Vector3Field>("scaleMinValues");
+        uiScaleMax = ui.Q<Vector3Field>("scaleMaxValues");
+        uiRotationAndScale = ui.Q<Foldout>("objectRotationAndScale");
 
         //prompt button
         var buttontest = ui.Q<Button>("promptButton");
@@ -307,8 +337,11 @@ public class TextToModel : EditorWindow
         {
             //single object generation
             case "Single":
-                if(uiOptionalObj.value)
+                singleChildToggle = uiSingleChildToggle.value;
+
+                if(optionalObj)
                 {
+                    //test for null later
                     //if the user chose to input an object for transform, it uses it
                     testGO = (Transform)uiTestGO.value;
                     Debug.Log(testGO);
@@ -335,6 +368,8 @@ public class TextToModel : EditorWindow
 
             //multiple same object generation
             case "Multiple":
+                multipleChildrenToggle = uiMultipleChildrenToggle.value;
+
                 switch (placement)
                 {
                     //places objects based on tags
@@ -352,11 +387,20 @@ public class TextToModel : EditorWindow
                         if(toggleSpawnPoint)
                         {
                             spawnPointGO = (Transform)uiSpawnPointGO.value;
+                            operation = 4;
                         }
                         else
                         {
-                            spawnPosition = uiSpawnPosition.value;
+                            GameObject placeGO = new GameObject();
+                            spawnPointGO = placeGO.transform;
+                            spawnPointGO.position = uiSpawnPosition.value;
+                            operation = 5;
                         }
+
+                        rotationMin = uiRotationMin.value;
+                        rotationMax = uiRotationMax.value;
+                        scaleMin = uiScaleMin.value;
+                        scaleMax = uiScaleMax.value;
 
                         radius = uiRadius.value;
                         break;
@@ -371,15 +415,6 @@ public class TextToModel : EditorWindow
                 Debug.Log("Something broke");
                 break;
         }
-
-        //scale = uiScale.value;
-
-        /*multipleMeshes = uiMultipleMeshes.value;
-        if(multipleMeshes == true)
-        {
-            meshInstances = uiMeshInstances.value;
-            radius = uiRadius.value;
-        }*/
 
         MeshyCreatePrompt();
     }
@@ -437,27 +472,41 @@ public class TextToModel : EditorWindow
         AssetFilePath filepath = new AssetFilePath();
         JsonUtility.FromJsonOverwrite(text, filepath);
 
-        //Debug.Log(meshInstances);
-
         //loads the mesh
         var test = (GameObject)EditorGUIUtility.Load(filepath.textFilePath);
 
-        Debug.Log(userChoice);
+        Debug.Log(operation);
 
         switch (operation)
         {
             case 1:
-                var instance1 = Instantiate(test);
-                instance1.transform.position = testGO.position;
-                instance1.transform.rotation = testGO.rotation;
-                instance1.transform.localScale = testGO.localScale;
+                if(singleChildToggle)
+                {
+                    var instance1 = Instantiate(test, testGO.transform);
+                }
+
+                else
+                {
+                    var instance1 = Instantiate(test);
+                    instance1.transform.position = testGO.position;
+                    instance1.transform.rotation = testGO.rotation;
+                    instance1.transform.localScale = testGO.localScale;
+                }
                 break;
 
             case 2:
-                var instance2 = Instantiate(test);
-                instance2.transform.position = testGO.position;
-                instance2.transform.rotation = testGO.rotation;
-                instance2.transform.localScale = testGO.localScale;
+                if (singleChildToggle)
+                {
+                    var instance1 = Instantiate(test, testGO.transform);
+                }
+
+                else
+                {
+                    var instance1 = Instantiate(test);
+                    instance1.transform.position = testGO.position;
+                    instance1.transform.rotation = testGO.rotation;
+                    instance1.transform.localScale = testGO.localScale;
+                }
                 break;
 
             case 3:
@@ -467,60 +516,96 @@ public class TextToModel : EditorWindow
                 {
                     //makes the created object a child of the object in scene
                     //var tagInstance = Instantiate(test, obj.transform);
-                    var tagInstance = Instantiate(test);
-                    tagInstance.transform.position = obj.transform.position;
-                    tagInstance.transform.rotation = obj.transform.rotation;
-                    tagInstance.transform.localScale = obj.transform.localScale;
+
+                    GameObject tagInstance;
+
+                    if(multipleChildrenToggle)
+                    {
+                        tagInstance = Instantiate(test, obj.transform);
+                    }
+                    else
+                    {
+                        tagInstance = Instantiate(test);
+                        tagInstance.transform.position = obj.transform.position;
+                        tagInstance.transform.rotation = obj.transform.rotation;
+                        tagInstance.transform.localScale = obj.transform.localScale;
+                    }
                 }
                 break;
 
             case 4:
+                for (int i = 0; i < meshInstances; i++)
+                {
+                    Vector2 spawnField = UnityEngine.Random.insideUnitCircle * radius;
+                    Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
+                    position.x += spawnPointGO.position.x;
+                    position.y += spawnPointGO.position.y;
+                    position.z += spawnPointGO.position.z;
+
+                    var rotX = UnityEngine.Random.Range(rotationMin.x, rotationMax.x);
+                    Debug.Log(rotX);
+                    var rotY = UnityEngine.Random.Range(rotationMin.y, rotationMax.y);
+                    Debug.Log(rotY);
+                    var rotZ = UnityEngine.Random.Range(rotationMin.z, rotationMax.z);
+                    Debug.Log(rotZ);
+                    var scaleX = UnityEngine.Random.Range(scaleMin.x, scaleMax.x);
+                    Debug.Log(scaleX);
+                    var scaleY = UnityEngine.Random.Range(scaleMin.y, scaleMax.y);
+                    Debug.Log(scaleY);
+                    var scaleZ = UnityEngine.Random.Range(scaleMin.z, scaleMax.z);
+                    Debug.Log(scaleZ);
+
+                    GameObject anInstance;
+
+                    if(multipleChildrenToggle)
+                    {
+                        anInstance = Instantiate(test, spawnPointGO);
+                        
+                    }
+                    else
+                    {
+                        anInstance = Instantiate(test);
+                    }
+
+                    anInstance.transform.position = position;
+                    anInstance.transform.rotation = Quaternion.Euler(rotX, rotY, rotZ);
+                    anInstance.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
+                }
                 break;
 
             case 5:
-                break;
-
-            /*case "Single":
-                var instance = Instantiate(test);
-                instance.transform.position = testGO.position;
-                instance.transform.rotation = testGO.rotation;
-                instance.transform.localScale = testGO.localScale;
-                break;
-
-            case "Multiple":
-                switch (placement)
+                for (int i = 0; i < meshInstances; i++)
                 {
-                    case "Object Tag":
-                        var arr = GameObject.FindGameObjectsWithTag(tag);
-                        
-                        foreach(GameObject obj in arr)
-                        {
-                            var tagInstance = Instantiate(test, obj.transform);
-                        }
-                        
-                        break;
+                    Vector2 spawnField = UnityEngine.Random.insideUnitCircle * radius;
+                    Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
+                    position.x += spawnPointGO.position.x;
+                    position.y += spawnPointGO.position.y;
+                    position.z += spawnPointGO.position.z;
 
-                    case "Spawn Radius":
-                        Debug.Log("spawnradius");
-                        for (int i = 0; i < meshInstances; i++)
-                        {
-                            Vector2 spawnField = UnityEngine.Random.insideUnitCircle * radius;
-                            Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
-                            position.x += testGO.position.x;
-                            position.y += testGO.position.y;
-                            position.z += testGO.position.z;
+                    var rotX = UnityEngine.Random.Range(rotationMin.x, rotationMax.x + 1);
+                    var rotY = UnityEngine.Random.Range(rotationMin.y, rotationMax.y + 1);
+                    var rotZ = UnityEngine.Random.Range(rotationMin.z, rotationMax.z + 1);
+                    var scaleX = UnityEngine.Random.Range(scaleMin.x, scaleMax.x + 1);
+                    var scaleY = UnityEngine.Random.Range(scaleMin.y, scaleMax.y + 1);
+                    var scaleZ = UnityEngine.Random.Range(scaleMin.z, scaleMax.z + 1);
 
-                            var anInstance = Instantiate(test);
-                            anInstance.transform.position = position;
-                            //anInstance.transform.localScale = new Vector3(scale, scale, scale);
-                        }
-                        break;
+                    GameObject anInstance;
 
-                    default:
-                        Debug.Log("something went wrong. placement method chosen is: " + placement);
-                        break;
+                    if (multipleChildrenToggle)
+                    {
+                        anInstance = Instantiate(test, spawnPointGO);
+
+                    }
+                    else
+                    {
+                        anInstance = Instantiate(test);
+                    }
+
+                    anInstance.transform.position = position;
+                    anInstance.transform.rotation = Quaternion.Euler(rotX, rotY, rotZ);
+                    anInstance.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
                 }
-                break;*/
+                break;
 
             default:
                 Debug.Log("something went wrong in placement");
