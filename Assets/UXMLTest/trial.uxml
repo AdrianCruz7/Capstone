@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UXMLTest/Display.uss?fileID=7433441132597879392&amp;guid=610333d49a98abc4f8b07e5bf05719b2&amp;type=3#Display" />
     <ui:VisualElement style="height: auto; width: auto;">
         <ui:Button text="Additional Settings" display-tooltip-when-elided="true" name="settings" style="max-width: 120px;" />
-        <ui:Label text="Insert your prompt into the field below" display-tooltip-when-elided="true" name="labelPrompt" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; top: auto; bottom: auto; padding-bottom: 10px; padding-top: 10px;" />
+        <ui:Label text="Insert your prompt into the field below " display-tooltip-when-elided="true" name="labelPrompt" enable-rich-text="true" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; top: auto; bottom: auto; padding-bottom: 10px; padding-top: 10px;" />
         <ui:TextField picking-mode="Ignore" name="promptField" style="flex-direction: column; white-space: nowrap; width: 464px; align-items: stretch; flex-wrap: wrap; justify-content: flex-start; height: 24px; position: relative; -unity-font-style: bold; padding-right: 20px; padding-left: 20px;" />
         <ui:Button text="Create Model" display-tooltip-when-elided="true" name="promptButton" style="padding-bottom: 4px; margin-bottom: 10px; margin-top: 10px;" />
         <ui:Label display-tooltip-when-elided="true" name="labelImage" style="height: 470px; width: 470px;" />
