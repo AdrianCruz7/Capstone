@@ -8,12 +8,12 @@ using UnityEngine.UI;
 
 public class CreationSettings : EditorWindow
 {
-    Transform testGO;
+    /*Transform testGO;
     bool multipleMeshes = false;
     int meshInstances = 1;
     float scale = 1.0f;
     float radius = 5.0f;
-    string prompt;
+    string prompt;*/
 
     public static void NewWindow()
     {

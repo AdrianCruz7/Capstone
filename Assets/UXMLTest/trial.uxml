@@ -22,9 +22,10 @@
             <ui:Toggle label="Children Objects" name="childrenMultipleOption" class="layerOne" style="-unity-font-style: normal; display: none;" />
             <ui:TextField picking-mode="Ignore" label="Tag" max-length="1000" name="tagField" class="test layerOne" style="-unity-font-style: normal; display: none;" />
             <ui:IntegerField label="# of Meshes" value="1" name="meshNumbers" class="test layerOne" style="-unity-font-style: normal; display: none;" />
-            <ui:Toggle label="Object for Spawn Point" name="spToggle" class="layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:Toggle label="Object for Spawn Point" name="spToggle" value="false" class="layerOne" style="-unity-font-style: normal; display: none;" />
             <uie:ObjectField label="Spawn Radius Point" type="UnityEngine.Transform, UnityEngine.CoreModule" name="spObject" class="layerOne" style="-unity-font-style: normal; display: none;" />
             <ui:Vector3Field label="Spawn Radius Point" name="spVector" class="test layerOne" style="-unity-font-style: normal; display: none;" />
+            <ui:Toggle label="Toggle Radius Visual" name="radiusVisual" class="layerOne" style="-unity-font-style: normal; display: none;" />
             <ui:FloatField label="Spawn Radius" value="1" name="radiusField" class="test layerOne" style="-unity-font-style: normal; display: none;" />
             <ui:Foldout text="Objects Rotation and Scale Settings" name="objectRotationAndScale" style="display: none;">
                 <ui:Vector3Field label="Rotation Min Values" name="rotationMinValues" class="layerTwo" style="-unity-font-style: normal;" />

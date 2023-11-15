@@ -18,6 +18,9 @@ using Codice.Client.Common;
 using GLTFast.Schema;
 using Toggle = UnityEngine.UIElements.Toggle;
 using UnityEditor.PackageManager.UI;
+using UnityEditor.TerrainTools;
+using Unity.VisualScripting;
+using System.Linq;
 
 public class TextToModel : EditorWindow
 {
@@ -64,7 +67,10 @@ public class TextToModel : EditorWindow
     Transform spawnPointGO;
 
     Vector3Field uiSpawnPosition;
-    
+
+    Toggle uiRadiusVisual;
+    bool radiusVisual;
+
     FloatField uiRadius;
     float radius = 1.0f;
 
@@ -107,6 +113,9 @@ public class TextToModel : EditorWindow
     Action Action4;
     Action Action5;
     Action Action6;
+    Action Action7;
+
+    GameObject radiusGismo;
 
     [MenuItem("Capstone/Text To 3D Asset")]
     public static void ShowExample()
@@ -118,15 +127,87 @@ public class TextToModel : EditorWindow
 
     private void OnEnable()
     {
-        Settings += WindowSettings;
+        //Settings += WindowSettings;
+        Settings += ToggleRadiusVisual;
         Action1 += Confirmation;
-        //Action2 += uitestfunction1;
+        Action2 += ToggleRadiusVisual;
         Action3 += UIObjectInSceneDisplay;
         Action4 += UIOptionsDisplay;
         Action5 += UIPlacementMethodDisplay;
         Action6 += UIToggleGOSpawnPoint;
+        Action7 += UpdateRadiusUI;
         SetUpUI();
         UIObjectInSceneDisplay();
+    }
+
+    private void OnDestroy()
+    {
+        var kill = Resources.FindObjectsOfTypeAll<GameObject>().Where(obj => obj.name == "GUITestObject");
+
+        foreach (var obj in kill)
+        {
+            DestroyImmediate(obj);
+        }
+    }
+
+    //update position of sphere for when the value of spawn radius points changes (both manual input and object transform)
+    //update position of sphere if object for spawn point is toggled
+    public void UpdateRadiusUI()
+    {
+        uiRadius.value = Mathf.Clamp(uiRadius.value, 1, 100);
+        UpdateRadiusVisual1();
+    }
+
+    //case if radius value changes
+    public void UpdateRadiusVisual1()
+    {
+        radius = uiRadius.value;
+        radiusVisual = uiRadiusVisual.value;
+
+        if(radiusVisual)
+        {
+            GameObject rock = GameObject.Find("GUITestObject");
+            rock.GetComponent<DrawScript>().radius = radius;
+        }
+    }
+
+    public void ToggleRadiusVisual()
+    {
+        GameObject paper;
+
+        if (GameObject.Find("GUITestObject"))
+        {
+            paper = GameObject.Find("GUITestObject");
+            Debug.Log("Paper is " + paper);
+        }
+        else
+        {
+            paper = null;
+            Debug.Log("Paper is null");
+        }
+
+        radius = uiRadius.value;
+        radiusVisual = uiRadiusVisual.value;
+        Debug.Log(radiusVisual);
+        Debug.Log(paper);
+
+        if (radiusVisual && paper == null)
+        {
+            paper = new GameObject("GUITestObject");
+            paper.AddComponent<DrawScript>().radius = radius;
+        }
+        else if(!radiusVisual && paper != null)
+        {
+            DestroyImmediate(paper);
+        }/*
+        else
+        {
+            paper.GetComponent<DrawScript>().radius = radius;
+        }*/
+
+        //RaycastHit hit;
+        //Gizmos.DrawSphere(paper.transform.position, radius);
+        //Physics.SphereCast(paper.transform.position, radius, paper.transform.forward, out hit);
     }
 
     private void OnGUI()
@@ -134,9 +215,10 @@ public class TextToModel : EditorWindow
         uiChoices.RegisterValueChangedCallback(evt => Action4());
         uiPlacementMethod.RegisterValueChangedCallback(evt => Action5());
         uiToggleSpawnPoint.RegisterValueChangedCallback(evt => Action6());
+        uiRadiusVisual.RegisterValueChangedCallback(evt => Action2());
         uiMeshInstances.RegisterValueChangedCallback(evt => { uiMeshInstances.value = Mathf.Clamp(uiMeshInstances.value, 1, 100); });
         uiTagField.RegisterValueChangedCallback(evt => { tag =  uiTagField.value; });
-        uiRadius.RegisterValueChangedCallback(evt => { uiRadius.value =  Mathf.Clamp(uiRadius.value, 1, 100); });
+        uiRadius.RegisterValueChangedCallback(evt => Action7());
     } 
 
     //displays based on choice of single or multiple generation
@@ -216,6 +298,7 @@ public class TextToModel : EditorWindow
                 uiToggleSpawnPoint.style.display = StyleKeyword.None;
                 uiSpawnPointGO.style.display = StyleKeyword.None;
                 uiSpawnPosition.style.display = StyleKeyword.None;
+                uiRadiusVisual.style.display = StyleKeyword.None;
                 uiRadius.style.display = StyleKeyword.None;
                 uiRotationAndScale.style.display = StyleKeyword.None;
                 placement = uiPlacementMethod.value;
@@ -227,6 +310,7 @@ public class TextToModel : EditorWindow
                 uiMeshInstances.style.display = StyleKeyword.Auto;
                 uiToggleSpawnPoint.style.display = StyleKeyword.Auto;
                 UIToggleGOSpawnPoint();
+                uiRadiusVisual.style.display = StyleKeyword.Auto;
                 uiRadius.style.display = StyleKeyword.Auto;
                 uiRotationAndScale.style.display = StyleKeyword.Auto;
                 placement = uiPlacementMethod.value;
@@ -286,6 +370,7 @@ public class TextToModel : EditorWindow
         uiToggleSpawnPoint = ui.Q<Toggle>("spToggle");
         uiSpawnPointGO = ui.Q<ObjectField>("spObject");
         uiSpawnPosition = ui.Q<Vector3Field>("spVector");
+        uiRadiusVisual = ui.Q<Toggle>("radiusVisual");
         uiRadius = ui.Q<FloatField>("radiusField");
         uiRotationMin = ui.Q<Vector3Field>("rotationMinValues");
         uiRotationMax = ui.Q<Vector3Field>("rotationMaxValues");
@@ -624,6 +709,9 @@ public class TextToModel : EditorWindow
         TTMSettings window = GetWindow<TTMSettings>(windowType);
         window.Show();
     }
+
+//#if UNITY_EDITOR
+
 
 
     //Test and Debug functions from this point
