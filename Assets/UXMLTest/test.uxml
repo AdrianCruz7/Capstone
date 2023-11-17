@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:ScrollView style="flex-grow: 1; height: 165px;">
+        <ui:VisualElement style="min-width: 440px; max-width: 440px; align-items: stretch; align-self: center;">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+    </ui:ScrollView>
+</ui:UXML>

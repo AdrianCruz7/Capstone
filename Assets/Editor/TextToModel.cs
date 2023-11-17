@@ -21,9 +21,14 @@ using UnityEditor.PackageManager.UI;
 using UnityEditor.TerrainTools;
 using Unity.VisualScripting;
 using System.Linq;
+using System.Collections.Generic;
 
 public class TextToModel : EditorWindow
 {
+    //prompt
+    TextField uiPrompt;
+    string prompt;
+
     //choice
     DropdownField uiChoices;
     string userChoice = "";
@@ -86,7 +91,6 @@ public class TextToModel : EditorWindow
     Vector3 scaleMax;
 
     //miscellaneous
-    string prompt;
     Label labelImage;
     Texture2D image;
 
@@ -107,6 +111,7 @@ public class TextToModel : EditorWindow
 
     //used for functions of buttons
     Action Settings;
+    Action QueueWindow;
     Action Action1;
     Action Action2;
     Action Action3;
@@ -114,8 +119,14 @@ public class TextToModel : EditorWindow
     Action Action5;
     Action Action6;
     Action Action7;
+    Action Action8;
+    Action Action9;
 
-    GameObject radiusGismo;
+    //list of queued up prompts
+    public List<SaveClass> saveClasses = new List<SaveClass>();
+
+    //windows
+    QueueWindow queueWindow;
 
     [MenuItem("Capstone/Text To 3D Asset")]
     public static void ShowExample()
@@ -127,8 +138,9 @@ public class TextToModel : EditorWindow
 
     private void OnEnable()
     {
-        //Settings += WindowSettings;
-        Settings += ToggleRadiusVisual;
+        Settings += WindowSettings;
+        //Settings += ToggleRadiusVisual;
+        QueueWindow += CreateQueueWindow;
         Action1 += Confirmation;
         Action2 += ToggleRadiusVisual;
         Action3 += UIObjectInSceneDisplay;
@@ -136,6 +148,8 @@ public class TextToModel : EditorWindow
         Action5 += UIPlacementMethodDisplay;
         Action6 += UIToggleGOSpawnPoint;
         Action7 += UpdateRadiusUI;
+        Action8 += UpdateRadiusPosition;
+        Action9 += AddToQueue;
         SetUpUI();
         UIObjectInSceneDisplay();
     }
@@ -150,8 +164,33 @@ public class TextToModel : EditorWindow
         }
     }
 
-    //update position of sphere for when the value of spawn radius points changes (both manual input and object transform)
-    //update position of sphere if object for spawn point is toggled
+    public void UpdateRadiusPosition()
+    {
+        toggleSpawnPoint = uiToggleSpawnPoint.value;
+        radiusVisual = uiRadiusVisual.value;
+
+        if(toggleSpawnPoint && radiusVisual)
+        {
+            if(uiSpawnPointGO.value != null)
+            {
+                spawnPointGO = (Transform)uiSpawnPointGO.value;
+
+                GameObject scissors = GameObject.Find("GUITestObject");
+                scissors.transform.position = spawnPointGO.transform.position;
+            }
+            else
+            {
+                GameObject scissors = GameObject.Find("GUITestObject");
+                scissors.transform.position = Vector3.zero;
+            }
+        }
+        else if(!toggleSpawnPoint && radiusVisual)
+        {
+            GameObject scissors = GameObject.Find("GUITestObject");
+            scissors.transform.position = uiSpawnPosition.value;
+        }
+    }
+
     public void UpdateRadiusUI()
     {
         uiRadius.value = Mathf.Clamp(uiRadius.value, 1, 100);
@@ -199,7 +238,10 @@ public class TextToModel : EditorWindow
         else if(!radiusVisual && paper != null)
         {
             DestroyImmediate(paper);
-        }/*
+        }
+        
+        UpdateRadiusPosition();
+        /*
         else
         {
             paper.GetComponent<DrawScript>().radius = radius;
@@ -219,6 +261,10 @@ public class TextToModel : EditorWindow
         uiMeshInstances.RegisterValueChangedCallback(evt => { uiMeshInstances.value = Mathf.Clamp(uiMeshInstances.value, 1, 100); });
         uiTagField.RegisterValueChangedCallback(evt => { tag =  uiTagField.value; });
         uiRadius.RegisterValueChangedCallback(evt => Action7());
+
+        uiToggleSpawnPoint.RegisterValueChangedCallback(evt => Action8());
+        uiSpawnPointGO.RegisterValueChangedCallback(evt => Action8());
+        uiSpawnPosition.RegisterValueChangedCallback(evt => Action8());  
     } 
 
     //displays based on choice of single or multiple generation
@@ -330,8 +376,13 @@ public class TextToModel : EditorWindow
         ui = uiAsset.Instantiate();
         rootVisualElement.Add(ui);
 
+        uiPrompt = ui.Q<TextField>("promptField");
+
         var settingsBtn = ui.Q<Button>("settings");
-        settingsBtn.RegisterCallback<MouseUpEvent>(evt => Settings()); 
+        settingsBtn.RegisterCallback<MouseUpEvent>(evt => Settings());
+
+        //var viewBtn = ui.Q<Button>("viewQueue");
+        //viewBtn.RegisterCallback<MouseUpEvent>(evt => QueueWindow());
 
         labelImage = ui.Q<Label>("labelImage");
         labelImage.style.backgroundImage = EditorGUIUtility.Load("Assets/ImagesFolder/placeholder.png") as Texture2D;
@@ -381,12 +432,15 @@ public class TextToModel : EditorWindow
         //prompt button
         var buttontest = ui.Q<Button>("promptButton");
         buttontest.RegisterCallback<MouseUpEvent>((evt) => Action1());
+
+        var queueButton = ui.Q<Button>("addQueue");
+        queueButton.RegisterCallback<MouseUpEvent>((evt) => Action9());
     }
 
     void AssignValues()
     {
         //prompt value
-        prompt = ui.Q<TextField>("promptField").value;
+        prompt = uiPrompt.value;
 
         //checks what options the user chose and assigns values based on it
         switch (userChoice)
@@ -471,6 +525,70 @@ public class TextToModel : EditorWindow
         }
 
         MeshyCreatePrompt();
+    }
+
+    //adds to queue
+    public void AddToQueue()
+    {
+        prompt = uiPrompt.value;
+        userChoice = uiChoices.value;
+
+        if(prompt == null || prompt == string.Empty)
+        {
+            Debug.LogError("Please insert a prompt before adding to the queue");
+            return;
+        }
+
+        switch (userChoice)
+        {
+            //single generation option
+            case "Single Object":
+                int testGO_ID = 0;
+                singleChildToggle = uiSingleChildToggle.value;
+                optionalObj = uiOptionalObj.value;
+
+                if(optionalObj && uiTestGO.value != null)
+                {
+                    testGO_ID = uiTestGO.value.GetInstanceID();
+                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, testGO_ID);
+                    saveClasses.Add(newSaveClass);
+                }
+
+                else if(optionalObj && uiTestGO.value == null)
+                {
+                    GameObject gameObject = new GameObject("TestPlaceholder");
+                    testGO_ID = gameObject.GetInstanceID();
+
+                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, testGO_ID);
+                    saveClasses.Add(newSaveClass);
+                }
+
+                else
+                {
+                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, uiPosition.value, uiRotation.value, uiScale.value);
+                    saveClasses.Add(newSaveClass);
+                }
+
+                //reset values (just prompt for now)
+                ui.Q<TextField>("promptField").value = string.Empty;
+                break;
+
+            //multiple generation option
+            case "Multiple Objects":
+                userChoice = "Multiple";
+                break;
+
+            default:
+                Debug.Log("default");
+                break;
+        }
+
+        /*foreach (var saveClass in saveClasses)
+        {
+            Debug.Log(saveClass + " has been saved");
+        }*/
+
+        CreateQueueWindow();
     }
 
     public void MeshyCreatePrompt()
@@ -710,9 +828,19 @@ public class TextToModel : EditorWindow
         window.Show();
     }
 
-//#if UNITY_EDITOR
+    public void CreateQueueWindow()
+    {
+        if(saveClasses.Count == 0)
+        {
+            Debug.LogError("Please add to the queue before viewing the queue");
+            return;
+        }
 
-
+        var windowType = typeof(TextToModel);
+        queueWindow = GetWindow<QueueWindow>(windowType);
+        queueWindow.TestFunction(saveClasses);
+        queueWindow.Show();
+    }
 
     //Test and Debug functions from this point
     /*public void TestFunction1()

@@ -1,10 +1,16 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
     <Style src="project://database/Assets/UXMLTest/Display.uss?fileID=7433441132597879392&amp;guid=610333d49a98abc4f8b07e5bf05719b2&amp;type=3#Display" />
     <ui:VisualElement style="height: auto; width: auto;">
-        <ui:Button text="Additional Settings" display-tooltip-when-elided="true" name="settings" style="max-width: 120px;" />
+        <ui:VisualElement name="topbuttons" style="flex-grow: 1; flex-direction: row;">
+            <ui:Button text="Additional Settings" display-tooltip-when-elided="true" name="settings" style="max-width: 120px; flex-direction: column;" />
+            <ui:Button text="View Queue" display-tooltip-when-elided="true" name="viewQueue" style="display: none;" />
+        </ui:VisualElement>
         <ui:Label text="Insert your prompt into the field below " display-tooltip-when-elided="true" name="labelPrompt" enable-rich-text="true" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 20px; top: auto; bottom: auto; padding-bottom: 10px; padding-top: 10px;" />
         <ui:TextField picking-mode="Ignore" name="promptField" style="flex-direction: column; white-space: nowrap; width: 464px; align-items: stretch; flex-wrap: wrap; justify-content: flex-start; height: 24px; position: relative; -unity-font-style: bold; padding-right: 20px; padding-left: 20px;" />
-        <ui:Button text="Create Model" display-tooltip-when-elided="true" name="promptButton" style="padding-bottom: 4px; margin-bottom: 10px; margin-top: 10px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:Button text="Create Model" display-tooltip-when-elided="true" name="promptButton" style="padding-bottom: 4px; margin-bottom: 10px; margin-top: 10px; flex-grow: 1;" />
+            <ui:Button text="Add to Queue" display-tooltip-when-elided="true" name="addQueue" style="flex-grow: 1; margin-top: 10px; margin-bottom: 10px; padding-bottom: 4px;" />
+        </ui:VisualElement>
         <ui:Label display-tooltip-when-elided="true" name="labelImage" style="height: 470px; width: 470px;" />
     </ui:VisualElement>
     <ui:Foldout text="Object Generation Settings" value="true" name="objectFoldout" style="-unity-font-style: bold; height: auto;">
@@ -35,9 +41,4 @@
             </ui:Foldout>
         </ui:Foldout>
     </ui:Foldout>
-    <ui:VisualElement name="grow0element" style="flex-grow: 0; display: none;">
-        <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" />
-        <ui:Toggle label="Toggle" />
-        <ui:TextField picking-mode="Ignore" label="Text Field" />
-    </ui:VisualElement>
 </ui:UXML>
