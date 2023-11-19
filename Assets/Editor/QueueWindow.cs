@@ -16,6 +16,8 @@ public class QueueWindow : EditorWindow
     List<SaveClass> classes;
     ScrollView scrollView;
     List<VisualElement> visableQueue;
+    Button startQueue;
+    Action StartGeneration;
     //Action<Button> button;
 
     public static void NewWindow()
@@ -35,11 +37,30 @@ public class QueueWindow : EditorWindow
         scrollView = new ScrollView();
         rootVisualElement.Clear();
         rootVisualElement.Add(scrollView);
+        startQueue = new Button();
+        startQueue.text = "Begin Queue";
+        scrollView.Add(startQueue);
+    }
+
+    private void OnEnable()
+    {
+        StartGeneration += Generate;
     }
 
     private void OnGUI()
     {
-        
+        startQueue.RegisterCallback<MouseUpEvent>(evt => StartGeneration());
+    }
+
+    public void Generate()
+    {
+        var mainWindow = GetWindow<TextToModel>();
+        mainWindow.MeshyCreatePromptFromQueue(classes);
+
+        if (classes.Count == 0)
+        {
+            Close();
+        }
     }
 
     public void TestFunction(List<SaveClass> list)
@@ -123,8 +144,82 @@ public class QueueWindow : EditorWindow
                 break;
 
             case 3:
+                Button testbtn3 = new Button();
+                testbtn3.text = "Delete";
+
+                card.Add(new Label("Prompt: " + convert.prompt));
+                card.Add(new Label("Generation Type: " + convert.userChoice));
+                card.Add(new Label("Placement Type: " + convert.multiplePlacementMethod.ToString()));
+                card.Add(new Label("Children Object: " + convert.multipleChildToggle.ToString()));
+                card.Add(new Label("Tag: " + convert.multipleTag));
+                card.Add(testbtn3);
+
+                Label id3 = new Label(elementID.ToString());
+                id3.name = "elementID";
+                id3.style.display = StyleKeyword.None;
+
+                card.Add(id3);
+
+                testbtn3.RegisterCallback<MouseUpEvent>(evt => DeleteButton(testbtn3.parent));
+                visableQueue.Add(card);
                 break;
+
             case 4:
+                Button testbtn4 = new Button();
+                testbtn4.text = "Delete";
+
+                card.Add(new Label("Prompt: " + convert.prompt));
+                card.Add(new Label("Generation Type: " + convert.userChoice));
+                card.Add(new Label("Placement Type: " + convert.multiplePlacementMethod.ToString()));
+                card.Add(new Label("Children Object: " + convert.multipleChildToggle.ToString()));
+                card.Add(new Label("Spawn Point Toggle: " + convert.spawnPointToggle.ToString()));
+                card.Add(new Label("Number of Objects: " + convert.numberOfInstances.ToString()));
+                card.Add(new Label("Object ID: " + convert.spawnPointGO.ToString()));
+                //card.Add(new Label("Radius Visual: " + convert.radiusVisual.ToString()));
+                card.Add(new Label("Radius Value: " + convert.radiusValue.ToString()));
+                card.Add(new Label("Rotation Min: " + convert.rotationMin.ToString()));
+                card.Add(new Label("Rotation Max: " + convert.rotationMax.ToString()));
+                card.Add(new Label("Scale Min: " + convert.scaleMin.ToString()));
+                card.Add(new Label("Scale Max: " + convert.scaleMax.ToString()));
+                card.Add(testbtn4);
+
+                Label id4 = new Label(elementID.ToString());
+                id4.name = "elementID";
+                id4.style.display = StyleKeyword.None;
+
+                card.Add(id4);
+
+                testbtn4.RegisterCallback<MouseUpEvent>(evt => DeleteButton(testbtn4.parent));
+                visableQueue.Add(card);
+                break;
+
+            case 5:
+                Button testbtn5 = new Button();
+                testbtn5.text = "Delete";
+
+                card.Add(new Label("Prompt: " + convert.prompt));
+                card.Add(new Label("Generation Type: " + convert.userChoice));
+                card.Add(new Label("Placement Type: " + convert.multiplePlacementMethod.ToString()));
+                card.Add(new Label("Children Object: " + convert.multipleChildToggle.ToString()));
+                card.Add(new Label("Spawn Point Toggle: " + convert.spawnPointToggle.ToString()));
+                card.Add(new Label("Number of Objects: " + convert.numberOfInstances.ToString()));
+                card.Add(new Label("Spawn Point Position: " + convert.spawnPointPosition.ToString()));
+                //card.Add(new Label("Radius Visual: " + convert.radiusVisual.ToString()));
+                card.Add(new Label("Radius Value: " + convert.radiusValue.ToString()));
+                card.Add(new Label("Rotation Min: " + convert.rotationMin.ToString()));
+                card.Add(new Label("Rotation Max: " + convert.rotationMax.ToString()));
+                card.Add(new Label("Scale Min: " + convert.scaleMin.ToString()));
+                card.Add(new Label("Scale Max: " + convert.scaleMax.ToString()));
+                card.Add(testbtn5);
+
+                Label id5 = new Label(elementID.ToString());
+                id5.name = "elementID";
+                id5.style.display = StyleKeyword.None;
+
+                card.Add(id5);
+
+                testbtn5.RegisterCallback<MouseUpEvent>(evt => DeleteButton(testbtn5.parent));
+                visableQueue.Add(card);
                 break;
 
             default:

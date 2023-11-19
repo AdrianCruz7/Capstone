@@ -11,20 +11,20 @@ public class SaveClass
     //for single generation
     public bool singleChildToggle;
     public bool singleOptionalObj;
-    public int singleGO_ID;
+    public GameObject singleGO;
 
     //single obj reference
-    public SaveClass(string prompt, string userChoice, bool singleChildToggle, bool singleOptionalObj, int singleGO_ID)
+    public SaveClass(string prompt, string userChoice, bool singleChildToggle, bool singleOptionalObj, GameObject singleGO)
     {
         this.prompt = prompt;
         this.userChoice = userChoice;
         this.singleChildToggle = singleChildToggle;
         this.singleOptionalObj = singleOptionalObj;
-        this.singleGO_ID = singleGO_ID;
+        this.singleGO = singleGO;
 
         saveClassID = 1;
 
-        Debug.Log(prompt + " " + userChoice + " " + singleChildToggle + " " + singleOptionalObj + " " + singleGO_ID);
+        Debug.Log(prompt + " " + userChoice + " " + singleChildToggle + " " + singleOptionalObj + " " + singleGO);
     }
 
     //if singleChildToggle is false;
@@ -73,7 +73,7 @@ public class SaveClass
     public bool spawnPointToggle;
 
     //depends on the spawn point toggle
-    public int spawnPointGO_ID;
+    public GameObject spawnPointGO;
     public Vector3 spawnPointPosition;
 
     public bool radiusVisual;
@@ -85,13 +85,15 @@ public class SaveClass
     public Vector3 scaleMin;
     public Vector3 scaleMax;
 
-    public SaveClass(string prompt, string userChoice, string multiplePlacementMethod, bool spawnPointToggle, int spawnPointGO_ID, bool radiusVisual, float radiusValue, Vector3 rotationMin, Vector3 rotationMax, Vector3 scaleMin, Vector3 scaleMax)
+    public SaveClass(string prompt, string userChoice, string multiplePlacementMethod, bool multipleChildToggle, int numberOfInstances, bool spawnPointToggle, GameObject spawnPointGO, bool radiusVisual, float radiusValue, Vector3 rotationMin, Vector3 rotationMax, Vector3 scaleMin, Vector3 scaleMax)
     {
         this.prompt = prompt;
         this.userChoice = userChoice;
         this.multiplePlacementMethod = multiplePlacementMethod;
+        this.multipleChildToggle = multipleChildToggle;
+        this.numberOfInstances = numberOfInstances;
         this.spawnPointToggle = spawnPointToggle;
-        this.spawnPointGO_ID = spawnPointGO_ID;
+        this.spawnPointGO = spawnPointGO;
         this.radiusVisual = radiusVisual;
         this.radiusValue = radiusValue;
         this.rotationMin = rotationMin;
@@ -100,5 +102,24 @@ public class SaveClass
         this.scaleMax = scaleMax;
 
         saveClassID = 4;
+    }
+
+    public SaveClass(string prompt, string userChoice, string multiplePlacementMethod, bool multipleChildToggle, int numberOfInstances, bool spawnPointToggle, Vector3 spawnPointPosition, bool radiusVisual, float radiusValue, Vector3 rotationMin, Vector3 rotationMax, Vector3 scaleMin, Vector3 scaleMax)
+    {
+        this.prompt = prompt;
+        this.userChoice = userChoice;
+        this.multiplePlacementMethod = multiplePlacementMethod;
+        this.multipleChildToggle = multipleChildToggle;
+        this.numberOfInstances = numberOfInstances;
+        this.spawnPointToggle = spawnPointToggle;
+        this.spawnPointPosition = spawnPointPosition;
+        this.radiusVisual = radiusVisual;
+        this.radiusValue = radiusValue;
+        this.rotationMin = rotationMin;
+        this.rotationMax = rotationMax;
+        this.scaleMin = scaleMin;
+        this.scaleMax = scaleMax;
+
+        saveClassID = 5;
     }
 }

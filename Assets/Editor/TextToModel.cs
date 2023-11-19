@@ -549,8 +549,9 @@ public class TextToModel : EditorWindow
 
                 if(optionalObj && uiTestGO.value != null)
                 {
-                    testGO_ID = uiTestGO.value.GetInstanceID();
-                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, testGO_ID);
+                    //testGO_ID = uiTestGO.value.GetInstanceID();
+                    GameObject valueGO = uiTestGO.value.GameObject();
+                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, valueGO);
                     saveClasses.Add(newSaveClass);
                 }
 
@@ -559,7 +560,8 @@ public class TextToModel : EditorWindow
                     GameObject gameObject = new GameObject("TestPlaceholder");
                     testGO_ID = gameObject.GetInstanceID();
 
-                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, testGO_ID);
+                    GameObject valueGO = uiTestGO.value.GameObject();
+                    var newSaveClass = new SaveClass(prompt, userChoice, singleChildToggle, optionalObj, valueGO);
                     saveClasses.Add(newSaveClass);
                 }
 
@@ -575,7 +577,63 @@ public class TextToModel : EditorWindow
 
             //multiple generation option
             case "Multiple Objects":
-                userChoice = "Multiple";
+                placement = uiPlacementMethod.value;
+                multipleChildrenToggle = uiMultipleChildrenToggle.value;
+
+                switch (placement)
+                {
+                    case "Object Tag":
+                        tag = uiTagField.value;
+                        var newSaveClass = new SaveClass(prompt, userChoice, placement, multipleChildrenToggle, tag);
+                        saveClasses.Add(newSaveClass);
+                        break;
+
+                    case "Spawn Radius":
+                        int spawnPointGO_ID = 0;
+
+                        meshInstances = uiMeshInstances.value;
+                        toggleSpawnPoint = uiToggleSpawnPoint.value;
+
+                        //code for spawn point
+
+                        radiusVisual = uiRadiusVisual.value;
+                        radius = uiRadius.value;
+
+                        rotationMin = uiRotationMin.value;
+                        rotationMax = uiRotationMax.value;
+                        scaleMin = uiScaleMin.value;
+                        scaleMax = uiScaleMax.value;
+
+                        if (toggleSpawnPoint && uiSpawnPointGO.value != null)
+                        {
+                            //spawnPointGO_ID = uiSpawnPointGO.value.GetInstanceID();
+                            GameObject valueGO = uiSpawnPointGO.value.GameObject();
+                            var multiSaveClass = new SaveClass(prompt, userChoice, placement, multipleChildrenToggle, meshInstances, toggleSpawnPoint, valueGO, radiusVisual, radius, rotationMin, rotationMax, scaleMin, scaleMax);
+                            saveClasses.Add(multiSaveClass);
+                        }
+                        else if(toggleSpawnPoint && uiSpawnPointGO.value == null)
+                        {
+                            GameObject gameObject = new GameObject("TestPlaceholder");
+                            //spawnPointGO_ID = gameObject.GetInstanceID();
+
+                            GameObject valueGO = uiSpawnPointGO.value.GameObject();
+                            var multiSaveClass = new SaveClass(prompt, userChoice, placement, multipleChildrenToggle, meshInstances, toggleSpawnPoint, valueGO, radiusVisual, radius, rotationMin, rotationMax, scaleMin, scaleMax);
+                            saveClasses.Add(multiSaveClass);
+                        }
+                        else
+                        {
+                            var multiSaveClass = new SaveClass(prompt, userChoice, placement, multipleChildrenToggle, meshInstances, toggleSpawnPoint, uiSpawnPosition.value, radiusVisual, radius, rotationMin, rotationMax, scaleMin, scaleMax);
+                            saveClasses.Add(multiSaveClass);
+                        }
+
+                        break;
+
+                    default:
+                        Debug.Log("Something in multiple broke");
+                        break;
+                }
+
+                ui.Q<TextField>("promptField").value = string.Empty;
                 break;
 
             default:
@@ -589,6 +647,194 @@ public class TextToModel : EditorWindow
         }*/
 
         CreateQueueWindow();
+    }
+
+    public void MeshyCreatePromptFromQueue(List<SaveClass> finalItems)
+    {
+        saveClasses = finalItems;
+
+        foreach(SaveClass sClass in saveClasses)
+        {
+            //Makes prompt class
+            PromptClass p = new PromptClass(sClass.prompt);
+
+            //Takes the prompt class and turns it into json
+            string strPrompt = JsonUtility.ToJson(p);
+
+            //this might break
+            //Writes and saves
+            File.WriteAllText(Application.dataPath + "/Editor/LastPrompt.json", strPrompt);
+
+            //Runs the python script
+            PythonRunner.RunFile("Assets/PythonScripts/NewImageToModel.py");
+
+            PlaceQueuedAsset(sClass);
+        }
+    }
+
+    public void PlaceQueuedAsset(SaveClass classInstance)
+    {
+        AssetDatabase.Refresh();
+
+        //reads the json file and puts text into string
+        string text = File.ReadAllText("Assets/Models/AssetFilePath.json");
+
+        //creates a assetfilepath class and overwrites the class with a new class from the json file
+        AssetFilePath filepath = new AssetFilePath();
+        JsonUtility.FromJsonOverwrite(text, filepath);
+
+        //loads the mesh
+        var test = (GameObject)EditorGUIUtility.Load(filepath.textFilePath);
+
+        Debug.Log(classInstance.saveClassID);
+
+        switch (classInstance.saveClassID)
+        {
+            case 1:
+                GameObject savedObject = classInstance.singleGO;
+
+                if(classInstance.singleChildToggle)
+                {
+                    Instantiate(test, savedObject.transform);
+                }
+                else
+                {
+                    var instance1 = Instantiate(test);
+
+                    instance1.transform.position = savedObject.transform.position;
+                    instance1.transform.rotation = savedObject.transform.rotation;
+                    instance1.transform.localScale = savedObject.transform.localScale;
+                }
+
+                break;
+
+            case 2:
+                if (classInstance.singleChildToggle)
+                {
+                    //child
+                    GameObject parent = new GameObject("Parent");
+                    parent.transform.position = classInstance.singlePosition;
+                    parent.transform.rotation = Quaternion.Euler(classInstance.singleRotation);
+                    parent.transform.localScale = classInstance.singleScale;
+
+                    var instance1 = Instantiate(test, parent.transform);
+                }
+
+                else
+                {
+                    //no child
+                    var instance1 = Instantiate(test);
+                    instance1.transform.position = classInstance.singlePosition;
+                    instance1.transform.rotation = Quaternion.Euler(classInstance.singleRotation);
+                    instance1.transform.localScale = classInstance.singleScale;
+                    //this may or may not be necessary
+                    //DestroyImmediate(go);
+                }
+                break;
+
+            case 3:
+                var arr = GameObject.FindGameObjectsWithTag(tag);
+
+                foreach (var item in arr)
+                {
+                    GameObject gameObject;
+
+                    if(classInstance.multipleChildToggle)
+                    {
+                        gameObject = Instantiate(test, item.transform);
+                    }
+                    else
+                    {
+                        gameObject = Instantiate(test);
+                        gameObject.transform.position = item.transform.position;
+                        gameObject.transform.rotation = item.transform.rotation;
+                        gameObject.transform.localScale = item.transform.localScale;    
+                    }
+                }
+                break;
+
+            case 4:
+                for (int i = 0; i < classInstance.numberOfInstances; i++)
+                {
+                    Vector2 spawnField = UnityEngine.Random.insideUnitCircle * classInstance.radiusValue;
+                    Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
+                    position.x += classInstance.spawnPointGO.transform.position.x;
+                    position.y += classInstance.spawnPointGO.transform.position.y;
+                    position.z += classInstance.spawnPointGO.transform.position.z;
+
+                    var rotX = UnityEngine.Random.Range(classInstance.rotationMin.x, classInstance.rotationMax.x);
+                    var rotY = UnityEngine.Random.Range(classInstance.rotationMin.y, classInstance.rotationMax.y);
+                    var rotZ = UnityEngine.Random.Range(classInstance.rotationMin.z, classInstance.rotationMax.z);
+                    var scaleX = UnityEngine.Random.Range(classInstance.scaleMin.x, classInstance.scaleMax.x);
+                    var scaleY = UnityEngine.Random.Range(classInstance.scaleMin.y, classInstance.scaleMax.y);
+                    var scaleZ = UnityEngine.Random.Range(classInstance.scaleMin.z, classInstance.scaleMax.z);
+
+                    GameObject anInstance;
+
+                    if (classInstance.multipleChildToggle)
+                    {
+                        //child
+                        anInstance = Instantiate(test, classInstance.spawnPointGO.transform);
+
+                    }
+                    else
+                    {
+                        //no child
+                        anInstance = Instantiate(test);
+                    }
+
+                    anInstance.transform.position = position;
+                    anInstance.transform.rotation = Quaternion.Euler(rotX, rotY, rotZ);
+                    anInstance.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
+                }
+                break;
+
+            case 5:
+                for (int i = 0; i < classInstance.numberOfInstances; i++)
+                {
+                    Vector2 spawnField = UnityEngine.Random.insideUnitCircle * classInstance.radiusValue;
+                    Vector3 position = new Vector3(spawnField.x, 0f, spawnField.y);
+                    position.x += classInstance.spawnPointGO.transform.position.x;
+                    position.y += classInstance.spawnPointGO.transform.position.y;
+                    position.z += classInstance.spawnPointGO.transform.position.z;
+
+                    var rotX = UnityEngine.Random.Range(classInstance.rotationMin.x, classInstance.rotationMax.x);
+                    var rotY = UnityEngine.Random.Range(classInstance.rotationMin.y, classInstance.rotationMax.y);
+                    var rotZ = UnityEngine.Random.Range(classInstance.rotationMin.z, classInstance.rotationMax.z);
+                    var scaleX = UnityEngine.Random.Range(classInstance.scaleMin.x, classInstance.scaleMax.x);
+                    var scaleY = UnityEngine.Random.Range(classInstance.scaleMin.y, classInstance.scaleMax.y);
+                    var scaleZ = UnityEngine.Random.Range(classInstance.scaleMin.z, classInstance.scaleMax.z);
+
+                    GameObject anInstance;
+
+                    if (classInstance.multipleChildToggle)
+                    {
+                        //child
+                        GameObject parent = new GameObject("parent");
+                        parent.transform.position = position;
+                        parent.transform.rotation = Quaternion.Euler(rotX, rotY, rotZ);
+                        parent.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
+
+                        anInstance = Instantiate(test, parent.transform);
+                    }
+                    else
+                    {
+                        //no child
+                        anInstance = Instantiate(test);
+                    }
+
+                    anInstance.transform.position = position;
+                    anInstance.transform.rotation = Quaternion.Euler(rotX, rotY, rotZ);
+                    anInstance.transform.localScale = new Vector3(scaleX, scaleY, scaleZ);
+                }
+                break;
+
+            default:
+                Debug.Log("Not yet implemented");
+                break;
+        }
+
+        Debug.Log("Assets placed successfully");
     }
 
     public void MeshyCreatePrompt()
